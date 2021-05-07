@@ -128,11 +128,12 @@ require('./styles/stylus/main.styl')
 
         // если мы пришли сюда при 1м запуске анимации, то удаляем текущ. и переключаемся на другую
         } else {
-          console.log('web - removeEventListener and destroyChatWebAnim')
+          
           window.removeEventListener('resize', this.handleResize)
           // deactivated this animation
           this.closeAnimationAction(elementID)
           // run web
+          console.log('this.args.idWebAnimToCreateTransformer', this.args.idWebAnimToCreateTransformer)
           document.getElementById(this.args.idWebAnimToCreateTransformer).click()
           return true
         }
