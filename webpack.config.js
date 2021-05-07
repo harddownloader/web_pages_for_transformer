@@ -292,6 +292,11 @@ module.exports = {
           from: path.resolve(__dirname, 'src/assets/fonts'),
           to: 'assets/fonts',
         },
+        {
+          // verstka
+          from: path.resolve(__dirname, 'src/verstka'),
+          to: 'verstka',
+        },
       ],
     }),
     !devMode
