@@ -73,10 +73,12 @@ html(lang='ru')
               span Обучение
             .redWebWrapper
               #redWebTriggerElement5
-          .col-6.col-sm-3.p-0
+          #RPtriggerElement8.col-6.col-sm-3.p-0
             .faq_icons.animate__animated.animate__pulse.mx-auto
               img.mx-auto(src='../verstka/img/faq_icon_tex.png' alt='')
               span Техподдержка
+            .redWebWrapper
+              #redWebTriggerElement8
           #RPtriggerElement4.col-6.col-sm-3.p-0
             .faq_icons.animate__animated.animate__pulse.float-end
               img.mx-auto(src='../verstka/img/faq_icon_calendar.png' alt='')
@@ -545,7 +547,7 @@ html(lang='ru')
       //- Оценка
       const redPhoneArgs6 = {
         idElement: 'RPtriggerElement6',
-        idWebAnimToCreateTransformer: 'redWebTriggerElement7',
+        idWebAnimToCreateTransformer: 'redWebTriggerElement6',
         type: 0,
         dateChatingInHeader: '12 марта 2021',
         headingChat: 'bot',
@@ -618,7 +620,7 @@ html(lang='ru')
       //- АХО
       const redPhoneArgs7 = {
         idElement: 'RPtriggerElement7',
-        idWebAnimToCreateTransformer: 'redWebTriggerElement8',
+        idWebAnimToCreateTransformer: 'redWebTriggerElement7',
         type: 0,
         dateChatingInHeader: '12 марта 2021',
         headingChat: 'bot',
@@ -688,6 +690,99 @@ html(lang='ru')
         ]
       }
 
+      //- техподдержка
+      const redPhoneArgs8 = {
+        idElement: 'RPtriggerElement8',
+        idWebAnimToCreateTransformer: 'redWebTriggerElement8',
+        type: 0,
+        dateChatingInHeader: '12 марта 2021',
+        headingChat: 'bot',
+        dateTime: '12 марта 2021 12:55',
+        clock: '12:55',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Привет, чем могу помочь?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:55',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'как обратиться в техническую поддержку?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Обратиться в техническую поддержку можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'у меня сломался компьютер, что делать?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если с твоей рабочей техникой что-то случилось, незамедлительно обращайся в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 5000
+          },
+          {
+            'from': 'user',
+            'text': 'Как изменить пароль почты?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если ты забыл пароль от своей почты или у тебя возникли другие проблемы, обратись в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',',
+            'second_text': ''
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          }
+        ]
+      }
+
       
       // если страница прогрузилась
       ready(() => {
@@ -699,6 +794,7 @@ html(lang='ru')
         new RedPhoneAnimation(redPhoneArgs5)
         new RedPhoneAnimation(redPhoneArgs6)
         new RedPhoneAnimation(redPhoneArgs7)
+        new RedPhoneAnimation(redPhoneArgs8)
       })
 
 
@@ -1265,6 +1361,99 @@ html(lang='ru')
         ]
       }
 
+      //- техподдержка
+      const redWebArgs8 = {
+        idElement: 'redWebTriggerElement8',
+        idWebAnimToCreateTransformer: 'RPtriggerElement8',
+        type: 0,
+        dateChatingInHeader: '12 марта 2021',
+        headingChat: 'bot',
+        dateTime: '12 марта 2021 12:55',
+        clock: '12:55',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Привет, чем могу помочь?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:55',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'как обратиться в техническую поддержку?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Обратиться в техническую поддержку можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'у меня сломался компьютер, что делать?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если с твоей рабочей техникой что-то случилось, незамедлительно обращайся в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 5000
+          },
+          {
+            'from': 'user',
+            'text': 'Как изменить пароль почты?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если ты забыл пароль от своей почты или у тебя возникли другие проблемы, обратись в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в Myteam: https://u.internal.myteam.mail.ru/profile/Aqt2kkDCDWRVwg8',',
+            'second_text': ''
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:56', 
+            'delay': 3300
+          }
+        ]
+      }
+
 
       ready(() => {
         new RedWebAnimation(redWebArgs1)
@@ -1274,5 +1463,6 @@ html(lang='ru')
         new RedWebAnimation(redWebArgs5)
         new RedWebAnimation(redWebArgs6)
         new RedWebAnimation(redWebArgs7)
+        new RedWebAnimation(redWebArgs8)
       })
     
