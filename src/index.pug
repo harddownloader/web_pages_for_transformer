@@ -1,0 +1,2350 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title КУБ
+    link(rel='icon', href='./assets/img/LogoKub.png')
+    // simplescroll
+    noscript
+      style.
+        /**
+        * Reinstate scrolling for non-JS clients
+        */
+        .simplebar-content-wrapper {overflow: auto;}
+    style.
+      body {
+        font-family: 'Calibri';
+        background-color: #fff;
+        margin: 0;
+      }
+      img.exampleBlock__img {
+        margin: 10px;
+      }
+      .redWebWrapper{
+        visibility: hidden
+      }
+    // /simplescroll
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='../verstka/css/bootstrap.min.css' rel='stylesheet')
+    link(href='../verstka/css/chats.css' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
+    link(href='../verstka/chats/chat-style.css' rel='stylesheet')
+    //- script(src='../verstka/chats/chats.js')
+    //- script(src='../verstka/chats/chat-bundle.js')
+
+  body
+    .row.text-center.header.animate__animated.animate__fadeIn
+      .col-12.logo
+      h1.h1_style2 HR FAQ
+    .container-fluid.main_faq.animate__animated.animate__fadeIn
+      .row.first_row.p-0
+        .col-6.leftcolumn.p-0
+          #redWebTriggerElement1.faq_icons.animate__animated.animate__pulse
+            img.mx-auto(src='../img/faq_icon_list.png' alt='')
+            span АХО
+        .col-6.text-end.rightcolumn.p-0
+          .faq_icons.animate__animated.animate__pulse
+            img.mx-auto(src='../img/faq_icon_lens.png' alt='')
+            span Оценка
+      .row
+        .col-6.leftcolumn.p-0
+          .faq_icons.animate__animated.animate__pulse
+            img.mx-auto(src='../img/faq_icon_baks.png' alt='')
+            span Компенсации и льготы
+        .col-6.text-end.rightcolumn.p-0
+          .faq_icons.animate__animated.animate__pulse
+            img.mx-auto(src='../img/faq_icon_cadr.png' alt='')
+            span Кадровое делопроизводство
+        .row.faq_bottom_icons.text-center.p-0
+          .col-6.col-sm-3.p-0.faq_bottom_side
+            .faq_icons.animate__animated.animate__pulse.float-start
+              img.mx-auto(src='../img/faq_icon_head.png' alt='')
+              span Обучение
+          .col-6.col-sm-3.p-0
+            .faq_icons.animate__animated.animate__pulse.mx-auto
+              img.mx-auto(src='../img/faq_icon_tex.png' alt='')
+              span Техподдержка
+          .col-6.col-sm-3.p-0
+            .faq_icons.animate__animated.animate__pulse.float-end
+              img.mx-auto(src='../img/faq_icon_calendar.png' alt='')
+              span ВК и организация мероприятий
+          .col-6.col-sm-3.p-0.faq_bottom_side
+            .faq_icons.animate__animated.animate__pulse.float-end
+              img.mx-auto(src='../img/faq_icon_gear.png' alt='')
+              span Подбор
+    .faq_footer.p-0.animate__animated.animate__fadeIn
+      .footer_emblem.float-end
+        span
+          | дополнительный
+          br
+          |  сервис по
+          br
+          |  неразрешенным
+          br
+          |  вопросам
+      .windows.text-center.float-start
+        h4 Active Directory
+        span Получение данных о пользователе (БЮ, др.) для персонификации ответа
+
+
+        
+    script(type="text/javascript").
+      //- анимация кругжков
+      const intervalIdPulse = setInterval(() => {
+        document.querySelectorAll('.animate__pulse').forEach((item) => {
+          //- console.log('item', item)
+          item.classList.remove('animate__pulse')
+          setTimeout(() => {
+            item.classList.add('animate__pulse')
+          }, 1000)
+        })
+      }, 10000)
+
+      // готова ли страница
+      const ready = (callback) => {
+        if (document.readyState != 'loading') callback()
+        else document.addEventListener('DOMContentLoaded', callback)
+      }
+
+      // red phone
+      // данные на вход для создания анимации
+      const redPhoneArgs1 = {
+        idElement: 'RPtriggerElement1',
+        idWebAnimToCreateTransformer: 'redWebTriggerElement1',
+        type: 0,
+        dateChatingInHeader: '12 марта 2021',
+        headingChat: 'bot',
+        dateTime: '12 марта 2021 12:41',
+        clock: '12:41',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Привет, Матвей! Я твой виртуальный ассистент. Кофе со мной не выпить — это, безусловно, минус, зато я знаю ответы на твои вопросы. Если тебя интересует что-то о жизни сотрудника в компании: отпусках, обучении, больничных, вакансиях, мероприятиях и других HR вопросах, а также о работе офиса — смело задавай их мне. Я отвечу! А если не смогу дать информацию сразу, то запишу твой вопрос, всё разузнаю и подключу коллег для решения. Дерзай!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'Я женился! Будут ли какие-то выплаты?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Специальных выплат при регистрации брака не предусмотрено. По согласованию с руководителем и при наличии неиспользованных дней ежегодного отпуска, ты можешь оформить оплачиваемый отпуск. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Также по законодательству тебе положено предоставление отпуска без сохранения заработной платы до 5 дней. Его можно оформить без ограничений по сроку подачи заявки.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 5000
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Как оформить отпуск?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Расскажу все самое главное про оформление отпуска :)<br>Чтобы пойти в отпуск, тебе необходимо оформить заявку. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. <br>Обрати внимание, что если ты хочешь взять оплачиваемый отпуск (при наличии нужного количества неиспользованных дней), заявку можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные за 3 дня до его начала. <br>Если у тебя на текущий момент не хватает доступных дней оплачиваемого отпуска или его нужно срочно оформить (до начала остается менее 7 дней), ты можешь оформить отпуск без сохранения заработной платы там же в личном кабинете или через мобильный интранет. <br>После согласования заявки руководителем тебе придет уведомление на почту. <br><br>Во время удаленной работы отпуска оформляют в отделе кадров без твоего присутствия (по онлайн заявкам). <br>После возвращения в офис нужно будет зайти в отдел кадров, расписаться в заявлении и приказе. <br>Если ты работаешь в офисе, то зайди в удобное время в отдел кадров для подписания документов. <br><br>Если остались вопросы, то тебе поможет Виктория Галицына, или ты можешь написать на почту отдела кадров kadry@corp.mail.ru.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 7000
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs2 = {
+        idElement: 'redPhoneTriggerElement2',
+        dateChatingInHeader: '1 июля 2020',
+        headingChat: 'Как добавить категории в личном кабинете?',
+        dateTime: '01 июля 2020 16:26',
+        clock: '16:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я - Цифровой ассистент. Есть вопросы по статусу квалификации или статусу платежа?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'как добавить категории в личном кабинете',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Направленные анкеты квалификации можно просмотреть в личном кабинете SRM: на вкладке "Управление" Поиск в разделе Квалификация по всем категориям (новое, в обработке, отправлено, для выяснения) и выбор нужной квалификационной анкеты кликом по ссылке с именем.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Если не удалось найти анкеты, обратитесь в службу поддержки тел. +7(495) 999-99-99 или отправьте сообщение на <span class="blueText">электронную почту</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Еще вопросы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'time': '01 июля 2020 16:26', 
+            'delay': 4300
+          }
+        ]
+      }
+
+      const redPhoneArgs3 = {
+        idElement: 'redPhoneTriggerElement3',
+        dateChatingInHeader: '21 августа 2020',
+        headingChat: 'Поиск и отображение данных по проектам городского бюджета',
+        dateTime: '21 августа 2020 12:09',
+        clock: '12:09',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Добрый день!<br>Я - Цифровой ассистент.<br>Готов предоставить информацию по направлениям:<br>1. Cтатус проблемы ЖКХ (водоснабжение, работа лифтов, отопление, электроснабжение)<br>2. Поиск и отображение статуса проектв городского бюджета',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите проблему или вопрос в произвольной форме',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09', 
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'проекты горбюджета ',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Вы в разделе "Проекты городского бюджета"</span>, последовательно выполните шаги:<br>1. Выберите метод поиска проекта<br>2. Ответьте на уточняющие вопросы<br>3. Получите статус и информацию об искомом проекте',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Поиск проектов по годам, уточните год:',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': [2021,2020,2019,2018,2017],
+            'time': '15 июня 2020 6:50', 
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Выберите метод поиска проекта',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['по номеру проекта',
+            'по карте',
+            'по категориям и статусам'],
+            'time': '21 августа 2020 12:09', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Введите номер проекта',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '650',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Данные по проекту: 650 Название: <span class="boldText">Тротуары при выставочном центре "Красный Коммунар"</span>.<br> Проектом предусмотрено обустройство тротуаров по улице Октябрьской ограничителями парковки. К сожалению, посетители выставочного центра, владельцы автомобилей, не придерживаются правил парковки и оставляют машины на тротуарах, пешеходной зоне и газонах, создают препятствия пешеходному движению, особенно пешеходам с детскими колясками, пожилым людям и инвалидам.<br> Проект Статус: На голосовании. <br>Категория: Дороги, транспорт Бюджет: 200 000 руб. Количество голосов 24 Руководитель проекта: Петрова Наталья Сергеевна.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Нужна информация по другому проекту?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs4 = {
+        idElement: 'redPhoneTriggerElement4',
+        dateChatingInHeader: '21 августа 2020',
+        headingChat: 'Когда дадут горячую воду',
+        dateTime: '21 августа 2020 11:25',
+        clock: '11:25',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Добрый день!<br>Я — Цифровой ассистент. Готов консультировать по вопросам:<br>1. Определение статуса проблемы ЖКХ (водоснабжение, работа лифтов, отопление, поставка электроэнергии)<br>2. Поиск и отображение статуса проекта Городского бюджета.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите проблему в произвольной форме',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'когда дадут горячую воду?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Вы в разделе <span class="boldText">ЖКХ</span>:<br>1. Задайте вопросы в произвольной форме. <br>2. Ответьте на уточняющие вопросы. <br>3. Получите статус и плановые сроки решения проблемы.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите название улицы',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Правды',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Указанная улица:<br> • проспект Правды',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Пожалуйста, укажите номер дома',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': '68',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Среди найденных вариантов  по Вашему запросу "68". Укажите интересующий Вас номер дома.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['68','68-A','68-Б','68-B'],
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Номер заявки: 5619168<br> Тип проблемы: Отсутсвие водоснабжения (гор. вода) - Плановые работы на трубопроводе <br> Статус: просрочено<br> Объект: Трубопровод на территории: Участок №4<br> Исполнитель: КП Мостеплоэнерго<br> Плановое завшерение работ: 16.09.2020- 23:59<br> Описание проблемы: Отсутствует водосносабжение горячей воды в связи с плановыми работами на теплосети.<br> Номер заявки: 6578102<br> Тип проблемы: Отсутствие водоснабжения горячей воды - Плановые работы на трубопроводе.<br> Статус: перенесено<br> Объект: Трубопровод на территории: Участок №4<br> Исполнитель: КП Мостеплоэнерго<br> Плановое завершение работ: 21.08.2020 - 17:00<br> Описание проблемы: Отсутствует горячее водоснабжение в связи с плановыми работами на теплосети.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Желаете проверить другой тип проблемы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25', 
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs5 = {
+        idElement: 'redPhoneTriggerElement5',
+        dateChatingInHeader: '30 июня 2020',
+        headingChat: 'Хочу принять участие в закупочных процедурах',
+        dateTime: '30 июня 2020 11:26',
+        clock: '11:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой ассистент. Есть вопросы по статусу квалификации или статусу платежа?<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'хочу участвовать в закупочных процедурах',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Участие в закупочных процедурах возможно только после прохождения процедуры квалификации и подачи заявки на участие. Приглашение принять участие будет отправлено Вам нашим специалистом службы снабжения за несколько дней до проведения закупок.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Просьба  обратить внимание на соблюдение сроков подачи коммерческого предложения и заяки на участие в закупках. Подача заявки на участие и коммерческого предложения вне указанных сроков невозможна. <span class="blueText">План закупочных процедур</span> на текущий год доступенна корпоративном сайте в разделе "Закупки".',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Возможность участия или сроки проведения ближайших конкурсов по категориям товаров и услуг можно уточнить при помощи формы обратной связи.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Ответ на Ваше обращение поступит в течение 5 рабочих дней.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если хотите узнать подробнее о процедуре квалификации поставщиков, задавайте еще вопросы.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы еще что-то уточнить?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs6 = {
+        idElement: 'redPhoneTriggerElement6',
+        dateChatingInHeader: '01 июля 2020',
+        headingChat: 'Как добавить категории в личном кабинете',
+        dateTime: '01 июля 2020 16:26',
+        clock: '16:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой ассистент. Есть вопросы по статусу квалификации или статусу платежа?<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'как добавить категории в личном кабинете',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Направленные анкеты квалификации можно просмотреть в личном кабинете SRM: на вкладке "Управление" Поиск в разделе Квалификация по всем категориям (новое, в обработке, отправлено, для выяснения) и выбор нужной квалификационной анкеты кликом по ссылке с именем.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Если не удалось найти анкеты, обратитесь в службу поддержки тел. +7(495) 999-99-99 или отправьте сообщение на <span class="blueText">электронную почту</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Еще вопросы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 4300
+          }
+        ]
+      }
+
+      const redPhoneArgs7 = {
+        idElement: 'redPhoneTriggerElement7',
+        dateChatingInHeader: '01 июля 2020',
+        headingChat: 'У меня возникла ошибка при регистрации',
+        dateTime: '01 июля 2020 16:35',
+        clock: '16:35',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой ассистент. Готов консультировать по вопросам получения статуса квалификации или статуса платежей.<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'у меня возникла ошибка при регистрации',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Убедитесь, что поля анкеты заполнены корректно. Все поля со звездочкой обязательны к заполнению, с приложением файла.<br> При отрицательном ответе на вопрос анкеты и отсутствии запрашиваемого документа, следует приложить пустой файл.<br> По всем техническим вопросам обращайтесь в службу поддержки по тел. +7(495) 999-99-99 или по <span class="blueText">электронной почте</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы спросить что-нибудь еще?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:35', 
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35', 
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs8 = {
+        idElement: 'redPhoneTriggerElement8',
+        dateChatingInHeader: '04 июня 2020',
+        headingChat: 'Нужен статус квалификации',
+        dateTime: '04 июня 2020 8:59',
+        clock: '8:59',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой ассистент. Есть вопросы по статусу квалификации или статусу платежей.<br>Опишите суть вопроса.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'нужен статус квалификации',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Общий статус квалификации <span class="boldText">"Квалифицирован"</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Вам присвоена квалификация по категориям ТМЦ</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Категория закупки <span class="boldText">IT-оборудование, ПО, оборудование связи</span><br>Завод для категории закупки <span class="boldText">Группа Х</span><br>Статус категорийной анкеты <span class="boldText">Анкета утверждена</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Квалификация по категориям Услуг</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Ваша кандидатура утверждена по категории <span class="boldText">Платформы SAP</span><br>Конечный срок квалификации <span class="boldText">29.03.2022</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если остались вопросы у Вас есть возможность обратиться к нам через <span class="blueText">форму обратной связи</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 4300
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы спросить что-нибудь еще?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '04 июня 2020 8:59', 
+            'delay': 3300
+          }
+        ]
+      }
+
+      const redPhoneArgs9 = {
+        idElement: 'redPhoneTriggerElement9',
+        dateChatingInHeader: '15 июня 2020',
+        headingChat: 'Оплата',
+        dateTime: '15 июня 2020 6:50',
+        clock: '6:50',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я -  Цифровой ассистент. Готов консультировать по статусу квалификации или статусу платежей.<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'оплата',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите год регистрации договора на предприятии ( (формат ГГГГ, например 2020)',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '2018',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50', 
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Выберите контрагента',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['ООО Кармен',
+            'ООО Сезар',
+            'ПАО Царский'],
+            'time': '15 июня 2020 6:50', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [2],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите интересующий Вас договор',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['100099'],
+            'time': '15 июня 2020 6:50', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 4300
+          },
+          {
+            'from': 'app',
+            'text': 'Для предоставления информации о платежах за период, укажите даты начала и окончания периода в формате ДД.ММ.ГГГГ (например, 01.01.2020)<br>Укажите дату начала периода',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '16.06.2020',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите дату окончания периода',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '22.06.2020',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'По результатам анализа периода с 16.06.2020 по 22.06.2020 по Договору 100099',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': 'table',
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Проверить по другим параметрам?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:51',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:51',
+            'delay': 3000
+          }
+        ]
+      }
+      // если страница прогрузилась
+      ready(() => {
+        // то инициализируем анимацию
+        new RedPhoneAnimation(redPhoneArgs1)
+        //- new RedPhoneAnimation(redPhoneArgs2)
+        //- new RedPhoneAnimation(redPhoneArgs3)
+        //- new RedPhoneAnimation(redPhoneArgs4)
+        //- new RedPhoneAnimation(redPhoneArgs5)
+        //- new RedPhoneAnimation(redPhoneArgs6)
+        //- new RedPhoneAnimation(redPhoneArgs7)
+        //- new RedPhoneAnimation(redPhoneArgs8)
+        //- new RedPhoneAnimation(redPhoneArgs9)
+      })
+
+      // blue web
+      const blueWebArgs1_dialog1 = {
+        dateChatingInHeader: '1 июля 2020',
+        headingChat: 'Статус по заявке',
+        dateTime: '30 июня 2020 11:26',
+        status: 'archive',
+        dialog: [
+          {
+            'from': 'app', 'text': 'Приветствую! Я - цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 1000
+          },
+          {
+            'from': 'app', 'text': 'Опишите суть вопроса', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': 'как заполнять квалификационную анкету?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 'melons': 0, 
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Квалификационная анкета проверяется в два этапа: службой безопасности о возможности сотрудничества и службой снабжения на правильность заполнения анкеты.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Сотрудничество с нами возможно только после одобрения анкеты службами безопасности и снабжения. Полная проверка кандидата по заявленым категориям занимает до 10 рабочих дней.На каждом из этапов поставщик получает на адрес электронной почты уведомление о результатах проверки.Отказ в квалификации на любом из этапов проверки не означет полного отказа от сотрудничества с Вашим предприятием. Повторная процедура квалификации возможна через 6 месяцев после устранения факторов риска.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Для уточнения текущего статуса квалификации задайте мне вопрос, либо воспользуйтесь формой обратной связи.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Еще вопросы?', 'second_text': '', 'descr': '', 'icon': '', 'options': true, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+        ]
+      }
+      
+      const blueWebArgs1_dialog2 = {
+        dateChatingInHeader: '1 июля 2020',
+        headingChat: 'не могу войти в SAP',
+        dateTime: '30 июня 2020 11:26',
+        status: 'active',
+        dialog: [
+          {
+            'from': 'app', 'text': '2Приветствую! Я - цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 1000
+          },
+          {
+            'from': 'app', 'text': 'Опишите суть вопроса', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': 'как заполнять квалификационную анкету?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 'melons': 0, 
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Квалификационная анкета проверяется в два этапа: службой безопасности о возможности сотрудничества и службой снабжения на правильность заполнения анкеты.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Сотрудничество с нами возможно только после одобрения анкеты службами безопасности и снабжения. Полная проверка кандидата по заявленым категориям занимает до 10 рабочих дней.На каждом из этапов поставщик получает на адрес электронной почты уведомление о результатах проверки.Отказ в квалификации на любом из этапов проверки не означет полного отказа от сотрудничества с Вашим предприятием. Повторная процедура квалификации возможна через 6 месяцев после устранения факторов риска.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Для уточнения текущего статуса квалификации задайте мне вопрос, либо воспользуйтесь формой обратной связи.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Еще вопросы?', 'second_text': '', 'descr': '', 'icon': '', 'options': true, 'time': '1 июля 2020 16:37', 
+            'delay': 3300
+          },
+        ]
+      }
+
+      const blueWebArgs1 = {
+        idElement: 'BlueWebtriggerElement1',
+        type: 0,
+        dateChatingInHeader: '1 июля 2020',
+        headingChat: 'статус заявки',
+        dateTime: '23 июня 2020 18:13',
+        clock: '18:13',
+        otherChats: [blueWebArgs1_dialog1, blueWebArgs1_dialog2],
+        dialogs: [
+          {
+            'from': 'app', 'text': 'Приветствую! Опишите суть вопроса', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13',
+            'delay': 1000
+          },
+          {
+            'from': 'user', 'text': 'статус  заявки', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 'melons': 0, 
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Укажите интересующую Вас тему:', 'second_text': '', 'descr': '', 'icon': '',
+            'options': ['Статус выполнения потребности на закупку', 'Проверить статус заявки на создание ОЗМ'],
+            'time': '23 июня 2020 18:13', 
+            'delay': 3000
+          },
+          {
+            'from': 'user', 'text': [1], 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Введите номер заявки на создание ОЗМ', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': '678250', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Статус заявки: Материал создан<br>Текущий обработчик заявки: Михайлов Станислав<br>Контактные данные обработчика заявки:<br>тел. +7(495) 131-13-13, <br>эл.адрес mihaylov_stas@kub.ru', 'second_text': '', 'descr': '', 'icon': '',
+            'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Есть ли у Вас ещё вопросы по заявке № 678250?', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': 'Да', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Укажите интересующий Вас вопрос по заявке № 678250', 'second_text': '', 'descr': '', 'icon': '',
+            'options': ['Как скорректировать заявку?', 'Как ускорить создание ОЗМ?', 'Когда будет создана ОЗМ?', 'Нет вопросов по данной заявке'],
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': [0], 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Запрашиваемая заявка выполнена без возможности корректировки. При необходимости создайте новую заявку.', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Еще вопросы по заявке № 678250?', 'second_text': '', 'descr': '', 'icon': '',
+            'options': true,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': 'Нет', 'second_text': '', 'descr': '', 'icon': '', 'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Благодарю за обращение', 'second_text': '', 'descr': '', 'icon': '',
+            'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Завершаем сессию', 'second_text': '', 'descr': '', 'icon': '',
+            'options': false,
+            'time': '23 июня 2020 18:13', 
+            'delay': 3300
+          },
+        ]
+      }
+
+      // blue phone
+      // args->dialogs-> text -> [number] // это выбор ответа из списка(пред сообщение) , идет от 0 (т.е. кнопочка с 1м вариантом - это 0)
+      // данные на вход для создания анимации
+      const bluePhoneArgs1 = {
+        idElement: 'BFtriggerElement1',
+        type: 0,
+        dateChatingInHeader: '30 июня 2020',
+        headingChat: 'Как заполнять квалификационную анкету?',
+        dateTime: '1 июля 2020 16:37',
+        clock: '16:37',
+        dialogs: [
+          {
+            'from': 'app', 'text': 'Приветствую! Я — Цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 1000
+          },
+          {
+            'from': 'app', 'text': 'Опишите суть вопроса', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 3300
+          },
+          {
+            'from': 'user', 'text': 'как заполнять квалификационную анкету?', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37', 'melons': 0,
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Квалификационная анкета проверяется в два этапа: службой безопасности о возможности сотрудничества и службой снабжения на правильность заполнения анкеты.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 3000
+          },
+          {
+            'from': 'app', 'text': 'Сотрудничество с нами возможно только после одобрения анкеты службами безопасности и снабжения. Полная проверка кандидата по заявленым категориям занимает до 10 рабочих дней.На каждом из этапов поставщик получает на адрес электронной почты уведомление о результатах проверки. Отказ в квалификации на любом из этапов проверки не означет полного отказа от сотрудничества с Вашим предприятием. Повторная процедура квалификации возможна через 6 месяцев после устранения факторов риска.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Для уточнения текущего статуса квалификации задайте мне вопрос, либо воспользуйтесь <span class="blueText">формой обратной связи</span>.', 'second_text': '', 'descr': '', 'icon': '', 'options': false, 'time': '1 июля 2020 16:37',
+            'delay': 3300
+          },
+          {
+            'from': 'app', 'text': 'Еще вопросы?', 'second_text': '', 'descr': '', 'icon': '', 'options': true, 'time': '1 июля 2020 16:37',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs2 = {
+        idElement: 'bluePhoneTriggerElement2',
+        dateChatingInHeader: '1 июля 2020',
+        headingChat: 'Как добавить категории в личном кабинете?',
+        dateTime: '01 июля 2020 16:26',
+        clock: '16:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'как добавить категории в личном кабинете',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Направленные анкеты квалификации можно просмотреть в личном кабинете SRM: на вкладке "Управление" Поиск в разделе Квалификация по всем категориям (новое, в обработке, отправлено, для выяснения) и выбор нужной квалификационной анкеты кликом по ссылке с именем.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Если не удалось найти анкеты, обратитесь в службу поддержки тел. +7(495) 999-99-99 или отправьте сообщение на <span class="blueText">электронную почту</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Еще вопросы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'time': '01 июля 2020 16:26',
+            'delay': 4300
+          }
+        ]
+      }
+
+      const bluePhoneArgs3 = {
+        idElement: 'bluePhoneTriggerElement3',
+        dateChatingInHeader: '21 августа 2020',
+        headingChat: 'Поиск и отображение данных по проектам городского бюджета',
+        dateTime: '21 августа 2020 12:09',
+        clock: '12:09',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Добрый день!<br>Я — Цифровой помощник КУБ.<br>Готов предоставить информацию по направлениям:<br>1. Cтатус проблемы ЖКХ (водоснабжение, работа лифтов, отопление, электроснабжение)<br>2. Поиск и отображение статуса проектв городского бюджета',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите проблему или вопрос в произвольной форме',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'проекты горбюджета ',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Вы в разделе "Проекты городского бюджета"</span>, последовательно выполните шаги:<br>1. Выберите метод поиска проекта<br>2. Ответьте на уточняющие вопросы<br>3. Получите статус и информацию об искомом проекте',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Поиск проектов по годам, уточните год:',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': [2021,2020,2019,2018,2017],
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Выберите метод поиска проекта',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['по номеру проекта',
+            'по карте',
+            'по категориям и статусам'],
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Введите номер проекта',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '650',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Данные по проекту: 650 Название: <span class="boldText">Тротуары при выставочном центре "Красный Коммунар"</span>.<br> Проектом предусмотрено обустройство тротуаров по улице Октябрьской ограничителями парковки. К сожалению, посетители выставочного центра, владельцы автомобилей, не придерживаются правил парковки и оставляют машины на тротуарах, пешеходной зоне и газонах, создают препятствия пешеходному движению, особенно пешеходам с детскими колясками, пожилым людям и инвалидам.<br> Проект Статус: На голосовании. <br>Категория: Дороги, транспорт Бюджет: 200 000 руб. Количество голосов 24 Руководитель проекта: Петрова Наталья Сергеевна.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Нужна информация по другому проекту?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 12:09',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs4 = {
+        idElement: 'bluePhoneTriggerElement4',
+        dateChatingInHeader: '21 августа 2020',
+        headingChat: 'Когда дадут горячую воду',
+        dateTime: '21 августа 2020 11:25',
+        clock: '11:25',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Добрый день!<br>Я — Цифровой помощник КУБ. Готов консультировать по вопросам:<br>1. Определение статуса проблемы ЖКХ (водоснабжение, работа лифтов, отопление, поставка электроэнергии)<br>2. Поиск и отображение статуса проекта Городского бюджета.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 1000
+          },
+          {
+            'from': 'app',
+            'text': 'Опишите проблему в произвольной форме',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'когда дадут горячую воду?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Вы в разделе <span class="boldText">ЖКХ</span>:<br>1. Задайте вопросы в произвольной форме. <br>2. Ответьте на уточняющие вопросы. <br>3. Получите статус и плановые сроки решения проблемы.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите название улицы',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Правды',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Указанная улица:<br> • проспект Правды',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Пожалуйста, укажите номер дома',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': '68',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Среди найденных вариантов  по Вашему запросу "68". Укажите интересующий Вас номер дома.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['68','68-A','68-Б','68-B'],
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Номер заявки: 5619168<br> Тип проблемы: Отсутсвие водоснабжения (гор. вода) - Плановые работы на трубопроводе <br> Статус: просрочено<br> Объект: Трубопровод на территории: Участок №4<br> Исполнитель: КП Мостеплоэнерго<br> Плановое завшерение работ: 16.09.2020- 23:59<br> Описание проблемы: Отсутствует водосносабжение горячей воды в связи с плановыми работами на теплосети.<br> Номер заявки: 6578102<br> Тип проблемы: Отсутствие водоснабжения горячей воды - Плановые работы на трубопроводе.<br> Статус: перенесено<br> Объект: Трубопровод на территории: Участок №4<br> Исполнитель: КП Мостеплоэнерго<br> Плановое завершение работ: 21.08.2020 - 17:00<br> Описание проблемы: Отсутствует горячее водоснабжение в связи с плановыми работами на теплосети.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Желаете проверить другой тип проблемы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '21 августа 2020 11:25',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs5 = {
+        idElement: 'bluePhoneTriggerElement5',
+        dateChatingInHeader: '30 июня 2020',
+        headingChat: 'Хочу принять участие в закупочных процедурах',
+        dateTime: '30 июня 2020 11:26',
+        clock: '11:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'хочу участвовать в закупочных процедурах',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Участие в закупочных процедурах возможно только после прохождения процедуры квалификации и подачи заявки на участие. Приглашение принять участие будет отправлено Вам нашим специалистом службы снабжения за несколько дней до проведения закупок.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Просьба  обратить внимание на соблюдение сроков подачи коммерческого предложения и заяки на участие в закупках. Подача заявки на участие и коммерческого предложения вне указанных сроков невозможна. <span class="blueText">План закупочных процедур</span> на текущий год доступенна корпоративном сайте в разделе "Закупки".',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Возможность участия или сроки проведения ближайших конкурсов по категориям товаров и услуг можно уточнить при помощи формы обратной связи.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Ответ на Ваше обращение поступит в течение 5 рабочих дней.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если хотите узнать подробнее о процедуре квалификации поставщиков, задавайте еще вопросы.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы еще что-то уточнить?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,  'time': '30 июня 2020 11:26',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs6 = {
+        idElement: 'bluePhoneTriggerElement6',
+        dateChatingInHeader: '01 июля 2020',
+        headingChat: 'Как добавить категории в личном кабинете',
+        dateTime: '01 июля 2020 16:26',
+        clock: '16:26',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'как добавить категории в личном кабинете',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Направленные анкеты квалификации можно просмотреть в личном кабинете SRM: на вкладке "Управление" Поиск в разделе Квалификация по всем категориям (новое, в обработке, отправлено, для выяснения) и выбор нужной квалификационной анкеты кликом по ссылке с именем.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Если не удалось найти анкеты, обратитесь в службу поддержки тел. +7(495) 999-99-99 или отправьте сообщение на <span class="blueText">электронную почту</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Еще вопросы?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:26',
+            'delay': 4300
+          }
+        ]
+      }
+
+      const bluePhoneArgs7 = {
+        idElement: 'bluePhoneTriggerElement7',
+        dateChatingInHeader: '01 июля 2020',
+        headingChat: 'У меня возникла ошибка при регистрации',
+        dateTime: '01 июля 2020 16:35',
+        clock: '16:35',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Готов консультировать по вопросам получения статуса квалификации или статуса платежей.<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'у меня возникла ошибка при регистрации',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Убедитесь, что поля анкеты заполнены корректно. Все поля со звездочкой обязательны к заполнению, с приложением файла.<br> При отрицательном ответе на вопрос анкеты и отсутствии запрашиваемого документа, следует приложить пустой файл.<br> По всем техническим вопросам обращайтесь в службу поддержки по тел. +7(495) 999-99-99 или по <span class="blueText">электронной почте</span>.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы спросить что-нибудь еще?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '01 июля 2020 16:35',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '01 июля 2020 16:35',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs8 = {
+        idElement: 'bluePhoneTriggerElement8',
+        dateChatingInHeader: '04 июня 2020',
+        headingChat: 'Нужен статус квалификации',
+        dateTime: '04 июня 2020 8:59',
+        clock: '8:59',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежей.<br>Опишите суть вопроса.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'нужен статус квалификации',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Общий статус квалификации <span class="boldText">"Квалифицирован"</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Вам присвоена квалификация по категориям ТМЦ</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Категория закупки <span class="boldText">IT-оборудование, ПО, оборудование связи</span><br>Завод для категории закупки <span class="boldText">Группа Х</span><br>Статус категорийной анкеты <span class="boldText">Анкета утверждена</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': '<span class="boldText">Квалификация по категориям Услуг</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Ваша кандидатура утверждена по категории <span class="boldText">Платформы SAP</span><br>Конечный срок квалификации <span class="boldText">29.03.2022</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Если остались вопросы у Вас есть возможность обратиться к нам через <span class="blueText">форму обратной связи</span>',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '04 июня 2020 8:59',
+            'delay': 4300
+          },
+          {
+            'from': 'app',
+            'text': 'Хотели бы спросить что-нибудь еще?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '04 июня 2020 8:59',
+            'delay': 3300
+          }
+        ]
+      }
+
+      const bluePhoneArgs9 = {
+        idElement: 'bluePhoneTriggerElement9',
+        dateChatingInHeader: '15 июня 2020',
+        headingChat: 'Оплата',
+        dateTime: '15 июня 2020 6:50',
+        clock: '6:50',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Приветствую! Я — Цифровой помощник КУБ. Готов консультировать по статусу квалификации или статусу платежей.<br>Опишите суть вопроса',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'оплата',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите год регистрации договора на предприятии ( (формат ГГГГ, например 2020)',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '2018',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Выберите контрагента',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['ООО Кармен',
+            'ООО Сезар',
+            'ПАО Царский'],
+            'time': '15 июня 2020 6:50',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [2],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите интересующий Вас договор',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': ['100099'],
+            'time': '15 июня 2020 6:50',
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': [0],
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 4300
+          },
+          {
+            'from': 'app',
+            'text': 'Для предоставления информации о платежах за период, укажите даты начала и окончания периода в формате ДД.ММ.ГГГГ (например, 01.01.2020)<br>Укажите дату начала периода',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '16.06.2020',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Укажите дату окончания периода',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': '22.06.2020',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'По результатам анализа периода с 16.06.2020 по 22.06.2020 по Договору 100099',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': 'table',
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Проверить по другим параметрам?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': true,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'user',
+            'text': 'Нет',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:50',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Благодарю за обращение',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:51',
+            'delay': 3000
+          },
+          {
+            'from': 'app',
+            'text': 'Завершаем сессию',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '15 июня 2020 6:51',
+            'delay': 3000
+          }
+        ]
+      }
+      
+
+      // красный веб
+      const redWebArgs1 = {
+        idElement: 'redWebTriggerElement1',
+        idWebAnimToCreateTransformer: 'RPtriggerElement1',
+        type: 0,
+        dateChatingInHeader: '12 марта 2021',
+        headingChat: 'кадровое делопроизводство',
+        dateTime: '12 марта 2021 12:41',
+        clock: '12:41',
+        dialogs: [
+          {
+            'from': 'app',
+            'text': 'Привет, Матвей! Я твой виртуальный ассистент. Кофе со мной не выпить — это, безусловно, минус, зато я знаю ответы на твои вопросы. Если тебя интересует что-то о жизни сотрудника в компании: отпусках, обучении, больничных, вакансиях, мероприятиях и других HR вопросах, а также о работе офиса — смело задавай их мне. Я отвечу! А если не смогу дать информацию сразу, то запишу твой вопрос, всё разузнаю и подключу коллег для решения. Дерзай!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41',
+            'delay': 1000
+          },
+          {
+            'from': 'user',
+            'text': 'Я женился! Будут ли какие-то выплаты?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Специальных выплат при регистрации брака не предусмотрено. По согласованию с руководителем и при наличии неиспользованных дней ежегодного отпуска, ты можешь оформить оплачиваемый отпуск. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Также по законодательству тебе положено предоставление отпуска без сохранения заработной платы до 5 дней. Его можно оформить без ограничений по сроку подачи заявки.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 5000
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:41', 
+            'delay': 3300
+          },
+          {
+            'from': 'user',
+            'text': 'Как оформить отпуск?',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 3300
+          },
+          {
+            'from': 'app',
+            'text': 'Расскажу все самое главное про оформление отпуска :)<br>Чтобы пойти в отпуск, тебе необходимо оформить заявку. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. <br>Обрати внимание, что если ты хочешь взять оплачиваемый отпуск (при наличии нужного количества неиспользованных дней), заявку можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные за 3 дня до его начала. <br>Если у тебя на текущий момент не хватает доступных дней оплачиваемого отпуска или его нужно срочно оформить (до начала остается менее 7 дней), ты можешь оформить отпуск без сохранения заработной платы там же в личном кабинете или через мобильный интранет. <br>После согласования заявки руководителем тебе придет уведомление на почту. <br><br>Во время удаленной работы отпуска оформляют в отделе кадров без твоего присутствия (по онлайн заявкам). <br>После возвращения в офис нужно будет зайти в отдел кадров, расписаться в заявлении и приказе. <br>Если ты работаешь в офисе, то зайди в удобное время в отдел кадров для подписания документов. <br><br>Если остались вопросы, то тебе поможет Виктория Галицына, или ты можешь написать на почту отдела кадров kadry@corp.mail.ru.',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 7000
+          },
+          {
+            'from': 'app',
+            'text': 'Если что, я тут. Обращайся!',
+            'second_text': '',
+            'descr': '',
+            'icon': '',
+            'options': false,
+            'time': '12 марта 2021 12:42', 
+            'delay': 3300
+          }
+        ]
+      }
+
+
+      // если страница прогрузилась
+      ready(() => {
+        // то инициализируем анимацию
+        //- new BluePhoneAnimation(bluePhoneArgs1)
+        //- new BluePhoneAnimation(bluePhoneArgs2)
+        //- new BluePhoneAnimation(bluePhoneArgs3)
+        //- new BluePhoneAnimation(bluePhoneArgs4)
+        //- new BluePhoneAnimation(bluePhoneArgs5)
+        //- new BluePhoneAnimation(bluePhoneArgs6)
+        //- new BluePhoneAnimation(bluePhoneArgs7)
+        //- new BluePhoneAnimation(bluePhoneArgs8)
+        //- new BluePhoneAnimation(bluePhoneArgs9)
+      })
+      
+      
+      // если страница прогрузилась, то начинаем
+      ready(() => {
+          blueWebArgs1.otherChats.unshift({
+          dateChatingInHeader: blueWebArgs1.dateChatingInHeader,
+          headingChat: blueWebArgs1.headingChat,
+          dateTime: blueWebArgs1.dateTime,
+          status: 'active',
+          dialog: blueWebArgs1.dialogs
+        })
+
+        //- new WebBlueAnimation(blueWebArgs1)
+      })
+
+
+      ready(() => {
+        new RedWebAnimation(redWebArgs1)
+      })
+    

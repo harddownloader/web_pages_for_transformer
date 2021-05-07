@@ -1,0 +1,436 @@
+@charset "UTF-8";
+@font-face {font-family:Rezerv-Regular;src: url(../css/fonts/rezerv_regular.ttf);}
+@font-face {font-family:TT Norms Pro bold;src: url(../css/fonts/tt_norms_pro_bold.otf);}
+@font-face {font-family:TT Norms Pro regular;src: url(../css/fonts/tt_norms_pro_regular.otf);}
+@font-face {font-family:TT Norms Pro medium;src: url(../css/fonts/tt_forms_pro_medium.otf);}
+@font-face {font-family:TT Norms Pro light;src: url(../css/fonts/tt_norms_pro_light.otf);}
+
+.main {background: url('../img/bg_pc.png') center 640px no-repeat;background-size: 450px auto; min-height:100vh;color:#E32732;overflow:hidden;}
+.logo {background: url('../img/main_logo.png') center no-repeat;background-size:contain;width:278px;height:131px;display:block;margin:33px auto 25px auto;}
+h1 {-webkit-text-stroke: 1px #E32732;color:#E8E8E8;font-family: Rezerv-Regular;font-size:74px;margin:0;line-height:74px;}
+.h1_style2 {font-size:127px;margin-top:27px;}
+.h1_style3 {font-size:75px;margin-top:7px;}
+.h1_style4 {font-size:73px;margin-top:7px;}
+
+
+h3,h4{font-family: TT Norms Pro bold;margin:0;}
+h3 {font-size:32px;}
+h4 {font-size:29px;}
+.leftcolumn {}
+.rightcolumn {}
+.header {margin:0;color:#E32732;}
+.index_screen .logo {width:358px;height:170px;margin:17px auto 25px auto;}
+.index_screen {background:#fff url('../img/bg_main.png') center bottom no-repeat;min-height:1080px;}
+.index_screen a {width:290px;display:inline-block;text-align:center;font-family:TT Norms Pro regular;font-size:31px;line-height:29px;color:#E32732;text-decoration:none;}
+.index_screen a img, .index_screen a span {display:block;margin:0 auto 7px auto;}
+.index_row_1 {max-width:626px;margin:41px auto;position:relative;z-index:500;}
+.index_row_2 {max-width:1230px;margin:-170px auto;position:relative;z-index:400;}
+.index_row_3 {max-width:1600px;margin:136px auto;position:relative;z-index:300;}
+
+.animate_delay_2 {animation-delay: 200ms;}
+.animate_delay_3 {animation-delay: 300ms;}
+.animate_delay_4 {animation-delay: 400ms;}
+.animate_delay_5 {animation-delay: 500ms;}
+.animate_delay_6 {animation-delay: 600ms;}
+.icons_line {background: #fff url('../img/icons_line.png') center no-repeat;background-size:contain;display:block;max-width:809px;max-height:130px;margin:80px auto 33px auto;text-align:center;}
+.single_icon {display:inline-block; height:130px; width:130px;margin:0 22px;background-size:contain;	}
+.single_icon:hover, .list_item li, .rightcolumn_blocks h5 {cursor:pointer;}
+.icon_cart {background: url('../img/icon_cart.png') center no-repeat; }
+.icon_card {background: url('../img/icon_card.png') center no-repeat; animation-delay: 200ms; }
+.icon_man {background: url('../img/icon_man.png') center no-repeat; animation-delay: 300ms;}
+.icon_gear {background: url('../img/icon_gear.png') center no-repeat; animation-delay: 400ms;}
+.icons_mozg {background: url('../img/icons_mozg.png') top right no-repeat; background-size:contain;height:219px;display:block;margin:0 88px 24px 0;}
+.leftcolumn_content {padding-left:54px;}
+.list_item {list-style:none; font-family:TT Norms Pro regular;margin-top:25px;padding-left:0;}
+.list_item li { margin: 9px 0;font-size:29px;line-height:36px;}
+.bubochka {background: url('../img/list_item.png') no-repeat; background-size:contain;display:inline-block;width:30px;height:28px;margin:0 15px -9px 0;animation-delay: 600ms;}
+.list_item li:last-child .bubochka {background:#fff;}
+.rightcolumn_blocks h5 {background: url('../img/list_item.png') 0 7px no-repeat;display:inline-block;padding-left:41px;font-size:29px;font-family:TT Norms Pro medium;margin:27px 0 0 0;}
+.rightcolumn_blocks p {font-size:26px;font-family:TT Norms Pro light;margin-top:4px;line-height:26px;}
+
+.main_faq {background: url('../img/bg_faq.png') center 92px no-repeat;max-width:1450px;margin-top:-45px;color:#E32732;}
+.first_row {max-width:1350px;margin:-15px auto -65px auto;}
+.faq_icons {background:#fff;width:177px;height:177px;border:4px solid #E32732;display:flex;align-items:center;position:relative;cursor:pointer;clear:both;margin-bottom:155px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.faq_icons span {font-family:TT Norms Pro regular;font-size:21px;line-height:22px;text-transform:uppercase;display:block;width:250px;position:absolute;top:100%;left:-39px;margin-top:23px;text-align:center;}
+.leftcolumn .faq_icons {float:left;}
+.rightcolumn .faq_icons {float:right;}
+.faq_bottom_icons {max-width:1060px;margin: 0 auto;}
+.faq_footer {margin-top:-187px;}
+.faq_bottom_side {margin-top:-87px;}
+.windows {background:url('../img/windows.png') center top no-repeat;color:#6C6C6C;width:250px;font-family:TT Norms Pro regular;font-size:16px;line-height:16px;padding-top:100px;margin:0 0 50px 65px;}
+.windows h4 {font-family:TT Norms Pro regular;font-size:29px;color:#6C6C6C;}
+.footer_emblem {background:url('../img/emblem.png') left center no-repeat;padding:0 0 0 105px;font-family:TT Norms Pro regular;font-size:27px;line-height:24px;margin:78px 90px 50px 0;}
+.footer_emblem span {border-left:2px solid #E32732;display:block;padding:0 0 2px 15px;color:#E32732;}
+
+.main_coop {background: url('../img/bg_pc.png') center 14px no-repeat;background-size:483px auto; max-width:1620px;color:#E32732;}
+.tripple_icon {background: url('../img/bg_gears.png') center center no-repeat;max-width:830px;display:block;margin:38px auto 0 auto;color:#E32732;font-family:TT Norms Pro bold;font-size:22px;}
+.tripple_single_icon {height:159px;width:159px;display:block;text-align:center;padding-top:60px;}
+.sap_erp {background: url('../img/sap_erp.png');background-size:contain;padding-left:20px;}
+.sap_srm {background: url('../img/sap_srm.png');background-size:contain;margin:0 auto;padding-right:15px;}
+.solman {background: url('../img/sap_solman.png');background-size:contain;padding-right:20px;}
+.coop_icons {background:#fff;width:142px;height:142px;border:3px solid #E32732;display:flex;align-items:center;position:relative;cursor:pointer;clear:both;margin-bottom:113px;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.coop_icons span {font-family:TT Norms Pro regular;font-size:22px;line-height:22px;display:block;width:276px;position:absolute;top:100%;left:-70px;margin-top:14px;text-align:center;}
+.leftcolumn .coop_icons {float:left;}
+.rightcolumn .coop_icons {float:right;}
+.coop_second_row {max-width:1436px;margin:0 auto;}
+.coop_bottom_icons {max-width:777px;margin: -145px auto 0 auto;}
+
+.main_jkh {background: url('../img/bg_jkh.png') center 280px no-repeat;min-height:1050px;height:100vh;color:#E32732;}
+.hr_bg {background: url('../img/bg_hr.png') center 290px no-repeat;min-height:1050px;height:100vh;color:#E32732;}
+.row_jkh {max-width:1808px;margin:27px auto 0 auto;}
+.phone_left, .phone_right {background: url('../img/bg_phone.png') no-repeat;min-height:415px;position:relative;font-family:TT Norms Pro regular;font-size:26px;line-height:30px;color:#5A5A5A;}
+.phone_left {background-position:105px top;padding:30px 0 0 355px;}
+.phone_left span {border-left:5px solid #E32732;padding-left:20px;display:block;}
+.phone_left img {position:absolute;bottom:-44px;left:0;}
+.phone_right {background-position: top 10px right 105px;padding:30px 355px 0 0;}
+.phone_right span {border-right:5px solid #E32732;padding:14px 20px 12px 0;display:block;}
+.phone_right img {position:absolute;bottom:-44px;right:0;}
+
+.top_metall {max-width:1660px;margin:0 auto;}
+.top_metall_side {margin-top:-20px;}
+.top_metall img {margin:0 68px 0 0;}
+.main_metall {background: url('../img/bg_metall.png') center 142px no-repeat;max-width:1690px;margin:50px auto;min-height:548px;display:block;}
+.metall_phone {background: url('../img/metall_phone.png') no-repeat;background-size:contain;display:block;width:390px;height:533px;position:relative;}
+.metall_girl {background: url('../img/metall_girl.png') no-repeat;background-size:cover;width:238px;height:254px;display:block;position:absolute;left:-85px;bottom:-76px;}
+.metall_boy {background: url('../img/metall_boy.png') no-repeat;background-size:cover;width:238px;height:254px;display:block;position:absolute;right:-85px;bottom:-76px;}
+
+.leftcolumn.metall_phone {background-position:right 40px top;}
+.rightcolumn.metall_phone {background-position:left 40px top;}
+.leftcolumn.metall_phone img {position:absolute; bottom:0;right:0;}
+.rightcolumn.metall_phone img {position:absolute; bottom:0;left:0;}
+
+.metall_icon {width:131px;height:131px;display:flex;background:#E8E8E8;border:1px solid #E32732;align-items:center;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;}
+.metall_first_row {max-width:506px;margin:-5px auto 0 auto;}
+.metall_first_row_central {margin:-38px auto 0 auto;}
+.metall_second_row {max-width:770px;margin:8px auto 0 auto;}
+.metall_third_row {max-width:870px;margin:35px auto 0 auto;}
+.metall_footer {max-width:1064px; margin:26px auto;text-align:center;}
+.metall_footer p {margin:15px auto;font-family:TT Norms Pro regular;font-size:38px;line-height:38px;color:#5A5A5A;}
+@media (min-width: 1900px) {
+.main {padding:0 120px 0 70px;background-position: center 620px;background-size: 631px auto;}
+	
+}
+@media (max-width: 1700px) {
+.main {padding:0 70px 0 20px;}
+h1 {font-size:60px;line-height:60px;}
+h3 {font-size:26px;}
+h4 {font-size:27px;}
+
+.index_screen .logo {width:358px;height:140px;}
+.index_screen {min-height:980px;background-size:1500px auto;}
+.index_screen a {width:260px;font-size:28px;line-height:27px;}
+.index_screen a img {width:210px; }
+.index_row_1 {max-width:600px;margin:41px auto;}
+.index_row_2 {max-width:1110px;margin:-170px auto;}
+.index_row_3 {max-width:1490px;margin:136px auto;}
+
+.rightcolumn_blocks p {font-size:24px;line-height:24px;}
+.rightcolumn_blocks h5 {font-size:27px;}
+.list_item li { margin: 9px 0;font-size:27px;line-height:34px;}
+.bubochka {width:28px;height:26px;margin:0 15px -8px 0;}
+.rightcolumn_blocks h5 {background-position: 0 5px;font-size:27px;}
+.icons_line {height:125px;width:778px;}
+.single_icon {height:125px; width:125px;margin:0 21px;background-size:125px auto;}
+.icons_mozg {height:200px;margin:10px 85px 28px 0;}
+
+.first_row {max-width:1150px;margin:-15px auto -95px auto;}
+.faq_bottom_icons {max-width:1040px;}
+.h1_style2 {font-size:124px;}
+.h1_style3 {font-size:61px;}
+.main_faq {background-size:600px auto;max-width:1340px; }
+.faq_icons {width:160px;height:160px;margin-bottom:155px;}
+.faq_icons img {width:101px;}
+.faq_icons span {font-size:20px;line-height:21px;width:210px;left:-30px;margin-top:22px;}
+.faq_footer {margin-top:-160px;}
+.windows {background-size:80px auto;width:220px;font-size:14px;line-height:14px;padding-top:95px;margin:0 0 50px 55px;}
+.windows h4 {font-size:26px;}
+.footer_emblem {background-size:87px auto; padding:0 0 0 105px;font-size:24px;line-height:22px;margin:75px 65px 50px 0;}
+
+.main_coop {background-position:center 20px; background-size:450px auto; max-width:1300px;}
+.coop_second_row {max-width:1200px;}
+.tripple_icon {max-width:700px;background-size:500px auto;}
+.coop_bottom_icons {max-width:650px;margin: -145px auto 0 auto;}
+
+.main_jkh {background-size:1600px auto; min-height:920px;}
+.hr_bg {background-size:1400px auto;min-height:920px;}
+
+.h1_style4 {font-size:68px;margin-top:4px;}
+.phone_left, .phone_right {min-height:315px;font-size:22px;line-height:24px;background-size:170px auto;}
+.phone_left img,.phone_right img {width:180px;}
+.phone_right {padding:20px 270px 0 0;background-position: top 10px right 85px;}
+.phone_left {padding:20px 0 0 270px;background-position:85px top;}
+
+.top_metall {max-width:1500px;}
+.top_metall img {margin:0 55px 0 0;}
+
+.main_metall {background-position:center 120px;max-width:1350px;margin:50px auto;background-size:320px;min-height:500px;}
+.metall_phone {width:280px;height:383px;}
+.leftcolumn.metall_phone {background-position:right 30px top;}
+.rightcolumn.metall_phone {background-position:left 30px top;}
+.metall_girl, .metall_boy {width:190px;height:202px;bottom:-58px;}
+.metall_girl {left:-70px;}
+.metall_boy {right:-70px;}
+
+.leftcolumn.metall_phone img, .rightcolumn.metall_phone img {width:35px;}
+.metall_icon {width:110px;height:110px;}
+.metall_icon img {width:75px;}
+.metall_first_row {max-width:410px;margin:-5px auto 0 auto;}
+.metall_first_row_central {margin:-35px auto 0 auto;}
+.metall_second_row {max-width:650px;margin:8px auto 0 auto;}
+.metall_third_row {max-width:760px;margin:35px auto 0 auto;}
+.metall_footer {max-width:940px; margin:25px auto;}
+.metall_footer p {margin:14px auto;font-size:32px;line-height:32px;}
+}
+@media (max-width: 1600px) {
+.main {padding:0 60px 0 15px;}
+.icons_line {height:110px;width:685px;}
+.single_icon {height:110px; width:110px;margin:0 18px;background-size:110px auto;}
+.icons_mozg {height:190px;margin:10px 80px 23px 0;}
+
+.h1_style2 {font-size:120px;margin-top:25px;}
+.h1_style4 {font-size:60px;margin-top:0;}
+
+}
+@media (max-width: 1500px) {
+.logo {width:270px;height:127px;margin:20px auto 15px auto;}
+.main {padding:0 40px 0 10px;background-position: center 650px;background-size: 350px auto;}
+h1 {font-size:53px;line-height:53px;}
+h3 {font-size:23px;}
+h4 {font-size:24px;}
+
+.index_screen .logo {width:348px;height:130px;}
+.index_screen {min-height:810px;background-size:1200px auto;}
+.index_screen a {width:220px;font-size:24px;line-height:22px;}
+.index_screen a img {width:180px; }
+.index_row_1 {max-width:480px;margin:25px auto;}
+.index_row_2 {max-width:945px;margin:-120px auto;}
+.index_row_3 {max-width:1250px;margin:110px auto;}
+
+.leftcolumn_content {padding-left:40px;}
+.rightcolumn_blocks h5 {padding-left:40px;font-size:25px;margin:26px 0 0 0;}
+.rightcolumn_blocks h5 {background-size: 25px auto;}
+.rightcolumn_blocks p {font-size:22px;line-height:22px;}
+.icons_line {height:100px;width:622px;}
+.single_icon {height:100px; width:100px;margin:0 16px;background-size:100px auto;}
+.list_item li { margin: 6px 0;font-size:22px;line-height:30px;}
+.bubochka {width:24px;height:22px;margin:0 10px -7px 0;}
+.icons_mozg {height:170px;margin:10px 50px 32px 0;}
+
+.first_row {max-width:950px;margin:-15px auto -95px auto;}
+.main_faq {max-width:1150px;background-size:550px auto;}
+.h1_style2 {font-size:110px;margin-top:23px;}
+.h1_style3 {font-size:53px;margin-top:5px;line-height:46px;}
+.faq_icons {width:150px;height:150px;margin-bottom:145px;}
+.faq_icons img {width:91px;}
+.faq_icons span {font-size:18px;line-height:19px;width:210px;margin-top:20px;left:-26px;}
+.faq_footer {margin-top:-130px;}
+.faq_bottom_side {margin-top:-67px;}
+.faq_bottom_icons {max-width:850px;}
+.windows {background-size:75px auto;width:200px;font-size:14px;line-height:14px;padding-top:85px;margin:0 0 50px 40px;}
+.windows h4 {font-size:22px;}
+.footer_emblem {background-size:75px auto; padding:0 0 0 86px;font-size:20px;line-height:19px;margin:73px 30px 40px 0;}
+
+.main_coop {background-position:center 15px; background-size:350px auto; max-width:1000px;}
+.coop_icons {width:120px;height:120px;margin-bottom:90px;}
+.coop_icons img {width:92px;}
+.coop_icons span {font-size:18px;line-height:18px;width:230px;left:-56px;}
+.coop_second_row {max-width:900px;}
+.tripple_icon {max-width:600px;background-size:450px auto;font-size:18px;}
+.tripple_single_icon {height:140px;width:140px;padding-top:52px;}
+.coop_bottom_icons {max-width:530px;margin: -140px auto 0 auto;}
+
+
+.main_jkh {background-size:1280px auto;min-height:800px;}
+.hr_bg {background-position:center 260px;background-size:1100px auto;min-height:760px;}
+.h1_style4 {font-size:54px;margin-top:0;}
+.phone_left, .phone_right {min-height:290px;font-size:20px;line-height:21px;background-size:160px auto;}
+.phone_left img,.phone_right img {width:170px;}
+.phone_right {padding:20px 255px 0 0;background-position: top 10px right 80px;}
+.phone_left {padding:20px 0 0 255px;background-position:80px top;}
+.phone_right span {padding:14px 15px 12px 0;}
+.phone_left span {padding-left:15px;}
+
+.top_metall {max-width:1200px;}
+.top_metall_side {margin-top:-15px;}
+.top_metall img {margin:0 40px 0 0;width:100px;}
+
+.main_metall {background-position:center 110px;max-width:1100px;margin:45px auto;background-size:280px;min-height:400px;}
+.metall_phone {width:200px;height:273px;margin-top:50px;}
+.leftcolumn.metall_phone img, .rightcolumn.metall_phone img {width:25px;}
+.leftcolumn.metall_phone {background-position:right 25px top;}
+.rightcolumn.metall_phone {background-position:left 25px top;}
+.metall_girl, .metall_boy {width:150px;height:159px;bottom:-45px;}
+.metall_girl {left:-57px;}
+.metall_boy {right:-57px;}
+
+.metall_icon {width:100px;height:100px;}
+.metall_icon img {width:65px;}
+.metall_first_row {max-width:380px;margin:0 auto;}
+.metall_first_row_central {margin:-30px auto 0 auto;}
+.metall_second_row {max-width:600px;margin:3px auto 0 auto;}
+.metall_third_row {max-width:710px;margin:25px auto 0 auto;}
+.metall_footer {max-width:800px; margin:22px auto;}
+.metall_footer p {margin:12px auto;font-size:26px;line-height:26px;}
+}
+@media (max-width: 1280px) {
+.main {background:none;}
+
+.index_screen .logo {width:328px;height:110px;}
+.index_screen {min-height:635px;background-size:900px auto;}
+.index_screen a {width:190px;font-size:20px;line-height:18px;}
+.index_screen a img {width:150px; }
+.index_row_1 {max-width:360px;margin:15px auto;}
+.index_row_2 {max-width:730px;margin:-120px auto;}
+.index_row_3 {max-width:960px;margin:110px auto;}
+
+.first_row {max-width:800px;margin:-15px auto -90px auto;}
+.main_faq {max-width:900px;background-size:500px auto;}
+.h1_style2 {font-size:104px;margin-top:22px;}
+.faq_icons {width:130px;height:130px;margin-bottom:135px;}
+.faq_icons img {width:81px;}
+.faq_icons span {font-size:16px;line-height:17px;width:190px;margin-top:18px;left:-35px;}
+.faq_footer {margin-top:-100px;}
+.faq_bottom_side {margin-top:-50px;}
+.faq_bottom_icons {max-width:690px;}
+.windows {background-size:75px auto;width:200px;font-size:14px;line-height:14px;padding-top:85px;margin:0 0 30px 20px;}
+.windows h4 {font-size:22px;}
+.footer_emblem {background-size:66px auto; padding:0 0 0 80px;font-size:18px;line-height:17px;margin:73px 20px 30px 0;}
+.footer_emblem span {padding:0 0 0 10px;}
+
+.main_coop {background-size:300px auto; max-width:800px;}
+.coop_icons {width:110px;height:110px;margin-bottom:80px;}
+.coop_icons img {width:80px;}
+.coop_icons span {font-size:16px;line-height:16px;width:200px;left:-46px;}
+.coop_second_row {max-width:750px;}
+.tripple_icon {max-width:500px;background-size:330px auto;font-size:16px;}
+.tripple_single_icon {height:130px;width:130px;padding-top:52px;}
+.coop_bottom_icons {max-width:430px;margin: -130px auto 0 auto;}
+
+.main_jkh {background-size:900px auto;min-height:640px;}
+.hr_bg {background-position:center 250px;background-size:1000px auto;min-height:700px;}
+.h1_style4 {font-size:50px;}
+.phone_left, .phone_right {min-height:270px;font-size:16px;line-height:17px;background-size:140px auto;}
+.phone_left img,.phone_right img {width:150px;}
+.phone_right {padding:20px 220px 0 0;background-position: top 10px right 70px;}
+.phone_left {padding:20px 0 0 220px;background-position:70px top;}
+.phone_right span {padding:14px 10px 12px 0;}
+.phone_left span {padding-left:10px;}
+
+.top_metall {max-width:950px;}
+.top_metall_side {margin-top:0;}
+.top_metall img {margin:0 15px 0 0;width:90px;}
+.main_metall {background-position:center 110px;max-width:870px;margin:20px auto;background-size:200px;min-height:300px;}
+.metall_icon {width:80px;height:80px;}
+.metall_icon img {width:50px;}
+.metall_first_row {max-width:270px;margin-top:30px;}
+.metall_first_row_central {margin:-25px auto 0 auto;}
+.metall_second_row {max-width:390px;}
+.metall_third_row {max-width:600px;margin:20px auto 0 auto;}
+.metall_footer {max-width:640px; margin:22px auto;}
+.metall_footer p {margin:12px auto;font-size:20px;line-height:20px;}
+}
+@media (max-width: 991px) {
+.logo {width:220px;height:104px;}
+.main {padding:0 20px 0 10px;}
+.icons_line {margin:40px auto 33px auto;}
+.leftcolumn_content {padding-left:20px;}
+h1 {font-size:44px;line-height:44px;}
+h3 {font-size:19px;}
+h4 {font-size:20px;}
+.rightcolumn_blocks h5 {padding-left:38px;font-size:22px;margin:20px 0 0 0;}
+.rightcolumn_blocks h5 {background-size: 20px auto;}
+.rightcolumn_blocks p {font-size:20px;line-height:20px;}
+
+.list_item {margin-top:20px;}
+.list_item li { margin: 6px 0;font-size:18px;line-height:22px;}
+.bubochka {width:20px;height:18px;margin:0 8px -5px 0;}
+.icons_mozg {height:170px;margin:10px 50px 43px 0;}
+
+.h1_style2 {font-size:100px;margin-top:20px;}
+.h1_style3 {font-size:44px;line-height:36px;}
+.main_faq {max-width:650px;background-size:300px auto;background-position:center 105px;}
+.first_row {max-width:600px;margin:-15px auto -40px auto;}
+.faq_icons {width:120px;height:120px;margin-bottom:80px;border:3px solid #E32732;}
+.faq_icons img {width:70px;}
+.faq_icons span {font-size:14px;line-height:15px;width:165px;margin-top:12px;left:-26px;}
+.faq_footer {margin-top:-60px;}
+.faq_bottom_side {margin-top:-30px;}
+.faq_bottom_icons {max-width:555px;}
+.windows {background-size:70px auto;width:200px;font-size:13px;line-height:13px;padding-top:80px;margin:0 0 30px 15px;}
+.windows h4 {font-size:22px;}
+.footer_emblem {background-size:66px auto; padding:0 0 0 80px;font-size:18px;line-height:17px;margin:73px 15px 30px 0;}
+.footer_emblem span {padding:0 0 0 10px;}
+
+.main_coop {background:none; max-width:90%;}
+.coop_icons {width:100px;height:100px;margin:0 auto 70px auto;float:none !important;}
+.coop_icons img {width:70px;}
+.coop_icons span {font-size:14px;line-height:14px;width:160px;left:-33px;}
+.coop_second_row {max-width:100%;}
+.tripple_icon {max-width:96%;background:none;font-size:14px;margin:20px auto;}
+.tripple_single_icon {height:120px;width:120px;padding-top:46px;}
+.coop_bottom_icons {max-width:100%;margin: 0 auto;}
+
+.main_jkh, .hr_bg {background:none !important;min-height:auto !important;}
+.h1_style4 {font-size:44px;}
+.phone_left, .phone_right {min-height:270px;font-size:16px;line-height:17px;background-size:140px auto;}
+.phone_left img,.phone_right img {width:150px;}
+.phone_right {padding:20px 220px 0 0;background-position: top 10px right 70px;}
+.phone_left {padding:20px 0 0 220px;background-position:70px top;}
+.phone_right span {padding:14px 10px 12px 0;}
+.phone_left span {padding-left:10px;}
+
+.top_metall {max-width:90%;}
+.top_metall_side {margin-top:20px;width:100% !important;display:block;text-align:center !important;padding:0;}
+.top_metall img {margin:0 7% !important;width:95px;}
+.main_metall {background-position:center 80px;max-width:600px;margin:0 auto;background-size:200px;min-height:200px;}
+.metall_first_row,.metall_second_row, .metall_third_row {display:none !important;}
+.metall_footer {max-width:380px; margin:20px auto;}
+.metall_footer p {font-size:16px;line-height:16px;}
+.metall_footer img {width:20px;}
+}
+@media (max-width: 800px) {
+.index_screen .logo {width:290px;height:97px;}
+.index_screen {min-height:auto;background:none;}
+.index_screen a {width:140px;font-size:15px;line-height:13px;}
+.index_screen a img {width:130px; }
+.index_row_1,.index_row_2, .index_row_3 {max-width:95%;margin:15px auto;text-align:center!important;}
+.index_screen .rightcolumn {text-align:center!important;}
+}
+@media (max-width: 728px) {
+.logo {width:200px;height:94px;}
+h1 {font-size:36px;line-height:30px;margin-bottom:10px;}
+h3 {font-size:18px;}
+.main {padding:0 10px;}
+.icons_line {background:none;max-height:225px;height:auto;width:100%;overflow:visible;}
+.single_icon {height:100px; width:100;margin:5px 10px;background-size:100px auto;}
+
+.h1_style2 {font-size:80px;margin-top:10px;}
+.h1_style3 {font-size:42px;line-height:34px;}
+.main_faq {max-width:90%;background:none;margin-top:25px;}
+.first_row {margin:0 auto; max-width:100%;}
+.faq_bottom_side {margin-top:0;}
+.faq_icons {margin:0 auto 47px auto;}
+.faq_icons, .windows, .footer_emblem {float:none !important;}
+.faq_footer {margin:0 auto;max-width:90%;}
+.faq_bottom_icons {margin-top:10px;}
+.windows, .footer_emblem {width:220px;margin:20px auto;display:block;}
+
+
+.h1_style4 {font-size:40px;}
+.phone_left, .phone_right {min-height:200px;font-size:14px;line-height:15px;background:none;}
+.phone_left img,.phone_right img {width:150px;}
+.phone_right {padding:20px 20px 0 0;}
+.phone_left {padding:20px 0 0 20px;}
+.phone_right span {padding:14px 10px 12px 0;}
+.phone_left span {padding-left:10px;}
+
+.top_metall img {margin:0 15px 0 0;width:85px;}
+.metall_phone {width:50%;height:auto;margin-top:0;text-align:center;background:none;}
+.metall_phone img {display:none;}
+.main_metall {background:none;max-width:90%;margin:25px auto;min-height:auto;}
+.metall_girl, .metall_boy {width:140px;height:148px;bottom:0;left:0;right:0;margin:0 auto;position:relative !important;}
+
+.metall_footer {max-width:90%; margin:20px auto;}
+.metall_footer img {width:20px;}
+.metall_footer p {font-size:16px;line-height:16px;}
+}
