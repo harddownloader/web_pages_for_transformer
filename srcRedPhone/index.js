@@ -192,7 +192,7 @@ require('./styles/stylus/main.styl')
 
     /**
      * чтобы нельзя было гонять скролл по веб-странице в момент анимации (это фикс белой полоски внизу экрана при анимации , тип что оверлей все не может покрыть , еси скролл включен)
-     * @param {*} value - значение для overflow , может быть visible или hidden
+     * @param {*} value - значение для overflow , может быть visible или hidden 
      */
     setBodyOverflow(value) {
       document.querySelector('body').style.overflow = value
