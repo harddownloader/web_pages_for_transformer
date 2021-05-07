@@ -4,7 +4,7 @@ import { getWebHtml } from './app/createHTML'
 // normalize
 import('normalize.css/normalize.css')
 // bootstrap 4.5 css
-import('bootstrap/dist/css/bootstrap.min.css')
+// import('bootstrap/dist/css/bootstrap.min.css')
 // подрубаем стили на stylus-е
 require('./styles/stylus/main.styl')
 ;(function () {
