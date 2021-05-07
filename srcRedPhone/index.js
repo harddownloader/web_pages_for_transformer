@@ -122,6 +122,7 @@ require('./styles/stylus/main.styl')
             // deactivated this animation
             this.closeAnimationAction(elementID)
             // run web
+            console.log('this.args.idWebAnimToCreateTransformer', this.args.idWebAnimToCreateTransformer)
             document.getElementById(this.args.idWebAnimToCreateTransformer).click()
             return true
           }
