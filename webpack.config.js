@@ -73,21 +73,6 @@ module.exports = {
           priority: 1,
           enforce: true,
         },
-        srcBluePhoneStyle: {
-          name: 'linkBluePhone',
-          test: (c) => {
-            if (c._identifier !== undefined) {
-              return (
-                c.type.match(/mini-extract/) &&
-                c._identifier.indexOf('srcBluePhone') !== -1 &&
-                c._identifier.indexOf('main.styl') !== -1
-              )
-            }
-          },
-          chunks: 'all',
-          priority: 1,
-          enforce: true,
-        },
         srcRedWebStyle: {
           name: 'linkRedWeb',
           test: (c) => {
@@ -103,51 +88,6 @@ module.exports = {
           priority: 1,
           enforce: true,
         },
-        srcBlueWebStyle: {
-          name: 'linkBlueWeb',
-          test: (c) => {
-            if (c._identifier !== undefined) {
-              return (
-                c.type.match(/mini-extract/) &&
-                c._identifier.indexOf('srcBlueWeb') !== -1 &&
-                c._identifier.indexOf('main.styl') !== -1
-              )
-            }
-          },
-          chunks: 'all',
-          priority: 1,
-          enforce: true,
-        },
-        // srcBlueWebQuboStyle: {
-        //   name: 'linkBlueWebQubo',
-        //   test: (c) => {
-        //     if (c._identifier !== undefined) {
-        //       return (
-        //         c.type.match(/mini-extract/) &&
-        //         c._identifier.indexOf('srcBlueWeQubob') !== -1 &&
-        //         c._identifier.indexOf('main.styl') !== -1
-        //       )
-        //     }
-        //   },
-        //   chunks: 'all',
-        //   priority: 1,
-        //   enforce: true,
-        // },
-        // srcBluePhoneQuboStyle: {
-        //   name: 'linkBluePhoneQubo',
-        //   test: (c) => {
-        //     if (c._identifier !== undefined) {
-        //       return (
-        //         c.type.match(/mini-extract/) &&
-        //         c._identifier.indexOf('srcBluePhoneQubo') !== -1 &&
-        //         c._identifier.indexOf('main.styl') !== -1
-        //       )
-        //     }
-        //   },
-        //   chunks: 'all',
-        //   priority: 1,
-        //   enforce: true,
-        // },
         simpleBar: {
           name: 'linkSimpleBar',
           test: (c) => {
@@ -215,12 +155,8 @@ module.exports = {
           if (
             tag.tagName === 'link' &&
             (
-              tag.attributes.href.indexOf('linkBluePhone') !== -1 ||
               tag.attributes.href.indexOf('linkRedPhone') !== -1 ||
-              tag.attributes.href.indexOf('linkBlueWeb') !== -1 ||
               tag.attributes.href.indexOf('linkRedWeb') !== -1
-              // || tag.attributes.href.indexOf('linkBlueWebQubo') !== -1 ||
-              // tag.attributes.href.indexOf('linkBluePhoneQubo') !== -1
             )
           ) {
             return true
@@ -230,37 +166,15 @@ module.exports = {
         'data-id': function (tag, compilation, index) {
           if (
             tag.tagName === 'link' &&
-            tag.attributes.href.indexOf('linkBluePhone') !== -1
-          ) {
-            return 'linkBluePhone'
-          } else if (
-            tag.tagName === 'link' &&
             tag.attributes.href.indexOf('linkRedPhone') !== -1
           ) {
             return 'linkRedPhone'
-          } else if (
-            tag.tagName === 'link' &&
-            tag.attributes.href.indexOf('linkBlueWeb') !== -1
-          ) {
-            return 'linkBlueWeb'
           } else if (
             tag.tagName === 'link' &&
             tag.attributes.href.indexOf('linkRedWeb') !== -1
           ) {
             return 'linkRedWeb'
           }
-          // else if (
-          //   tag.tagName === 'link' &&
-          //   tag.attributes.href.indexOf('linkBlueWebQubo') !== -1
-          // ) {
-          //   return 'linkBlueWebQubo'
-          // }
-          // else if (
-          //   tag.tagName === 'link' &&
-          //   tag.attributes.href.indexOf('linkBluePhoneQubo') !== -1
-          // ) {
-          //   return 'linkBluePhoneQubo'
-          // }
 
           return false
         },
@@ -279,23 +193,23 @@ module.exports = {
       patterns: [
         {
           // imgs
-          from: path.resolve(__dirname, 'src/assets/img'),
-          to: 'assets/img',
+          from: path.resolve(__dirname, 'src/chats/assets/img'),
+          to: 'chats/assets/img',
         },
         {
           // html
-          from: path.resolve(__dirname, 'src/assets/html'),
-          to: 'assets/html',
+          from: path.resolve(__dirname, 'src/chats/assets/html'),
+          to: 'chats/assets/html',
         },
         {
           // fonts
-          from: path.resolve(__dirname, 'src/assets/fonts'),
-          to: 'assets/fonts',
+          from: path.resolve(__dirname, 'src/chats/assets/fonts'),
+          to: 'chats/assets/fonts',
         },
         {
           // verstka
-          from: path.resolve(__dirname, 'src/verstka'),
-          to: 'verstka',
+          from: path.resolve(__dirname, 'src/webpage'),
+          to: 'webpage',
         },
       ],
     }),
@@ -317,21 +231,6 @@ module.exports = {
         exclude: /node_modules/,
         use: jsLoaders(),
       },
-      // {
-      //   test: /\.(sa|sc|c)ss$/,
-      //   use: [
-      //     {
-      //       loader: MiniCssExtractPlugin.loader,
-      //       options: {
-      //         hmr: process.env.NODE_ENV === 'development',
-      //         reloadAll: true,
-      //       },
-      //     },
-      //     'css-loader?url=false',
-      //     // 'postcss-loader',
-      //     'sass-loader',
-      //   ],
-      // },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
@@ -341,27 +240,6 @@ module.exports = {
           'sass-loader',
         ],
       },
-      // {
-      //   test: /\.styl$/,
-      //   use: [
-      //     {
-      //       loader: 'style-loader', // creates style nodes from JS strings
-      //     },
-      //     {
-      //       loader: MiniCssExtractPlugin.loader,
-      //       options: { publicPath: '/dist' },
-      //     },
-      //     {
-      //       loader: 'css-loader',
-      //     },
-      //     {
-      //       loader: 'stylus-loader', // compiles Stylus to CSS
-      //       options: {
-      //         use: [autoprefixer()],
-      //       },
-      //     },
-      //   ],
-      // },
       {
         test: /\.styl$/,
         use: [
@@ -389,7 +267,6 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
         loader: 'url-loader',
-        // include: path.join(__dirname, ''),
         options: {
           publicPath: './',
           limit: 10000,

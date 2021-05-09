@@ -122,19 +122,17 @@ require('./styles/stylus/main.styl')
             // deactivated this animation
             this.closeAnimationAction(elementID)
             // run web
-            console.log('this.args.idWebAnimToCreateTransformer', this.args.idWebAnimToCreateTransformer)
             document.getElementById(this.args.idWebAnimToCreateTransformer).click()
             return true
           }
 
         // если мы пришли сюда при 1м запуске анимации, то удаляем текущ. и переключаемся на другую
         } else {
-          
+          console.log('web - removeEventListener and destroyChatWebAnim')
           window.removeEventListener('resize', this.handleResize)
           // deactivated this animation
           this.closeAnimationAction(elementID)
           // run web
-          console.log('this.args.idWebAnimToCreateTransformer', this.args.idWebAnimToCreateTransformer)
           document.getElementById(this.args.idWebAnimToCreateTransformer).click()
           return true
         }
@@ -194,7 +192,7 @@ require('./styles/stylus/main.styl')
 
     /**
      * чтобы нельзя было гонять скролл по веб-странице в момент анимации (это фикс белой полоски внизу экрана при анимации , тип что оверлей все не может покрыть , еси скролл включен)
-     * @param {*} value - значение для overflow , может быть visible или hidden 
+     * @param {*} value - значение для overflow , может быть visible или hidden
      */
     setBodyOverflow(value) {
       document.querySelector('body').style.overflow = value
