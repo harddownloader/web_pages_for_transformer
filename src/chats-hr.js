@@ -213,7 +213,7 @@ const hrRedPhoneArgs2 = {
   idElement: 'hrRPtriggerElement2',
   idWebAnimToCreateTransformer: 'hrRedWebTriggerElement2',
   type: 0,
-  dateChatingInHeader: '20 апреля 2021',
+  dateChatingInHeader: '22 апреля 2021',
   headingChat: 'bot',
   dateTime: '22 апреля 2021 13:54',
   clock: '13:54',

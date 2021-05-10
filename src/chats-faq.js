@@ -426,7 +426,7 @@ const faqRedPhoneArgs5 = {
 }
 
 //- Оценка
-const faqDialo6 = [
+const faqDialog6 = [
   {
     'from': 'app',
     'text': 'Привет! Что интересует?',
@@ -497,11 +497,11 @@ const faqRedPhoneArgs6 = {
   headingChat: 'bot',
   dateTime: '12 марта 2021 12:55',
   clock: '12:55',
-  dialogs: faqDialo6
+  dialogs: faqDialog6
 }
 
 //- АХО
-const faqDialo7 = [
+const faqDialog7 = [
   {
     'from': 'app',
     'text': 'Привет, чем могу помочь?',
@@ -572,7 +572,7 @@ const faqRedPhoneArgs7 = {
   headingChat: 'bot',
   dateTime: '12 марта 2021 12:55',
   clock: '12:55',
-  dialogs: faqDialo7
+  dialogs: faqDialog7
 }
 
 //- техподдержка

@@ -319,7 +319,7 @@ const metallDialogs2 = [
     'second_text': '',
     'descr': '',
     'icon': '',
-    'options': fasle,
+    'options': false,
     'time': '21 сентября 2021 8:20', 
     'delay': 5000
   },
