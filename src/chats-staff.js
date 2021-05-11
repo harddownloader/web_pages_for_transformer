@@ -3,7 +3,7 @@ const shortTiming = 1000
 const mediumTiming = 3300
 const longTiming = 5000
 
-// участие в закупочных процедурах
+// найти инструкцию, долкумент
 const date1 = '3 апреля 2021'
 const timeFirst1 = '12:00'
 const timeSecond1 = '12:01'
@@ -156,13 +156,14 @@ const staffRedWebArgs1 = {
   dialogs: staffRedPhoneArgs1.dialogs
 }
 
-// квалификационные анкеты, причины отклонения
+// узнать статус заявки ОЗМ
 const date2 = '8 апреля 2021'
-const timeFirst2 = '16:37'
+const timeFirst2 = '11:41'
+const timeSecond2 = '11:42'
 const staffDialog2 = [
   {
     'from': 'app',
-    'text': 'Приветствую! Вопросы по статусу квалификации или статусу платежа?<br>Опишите суть вопроса',
+    'text': 'Приветствую! Опишите суть вопроса',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -172,12 +173,160 @@ const staffDialog2 = [
   },
   {
     'from': 'user',
-    'text': 'как заполнять квалификационную анкету?',
+    'text': 'статус  заявки',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите интересующую Вас тему:',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Статус выполнения потребности на закупку',
+      'Проверить статус заявки на создание ОЗМ'
+    ],
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [1],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Введите номер заявки на создание ОЗМ',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': '678250',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Статус заявки: Материал создан<br>Текущий обработчик заявки: Михайлов Станислав<br>Контактные данные обработчика заявки: тел. +7(495) 131-13-13, эл.адрес mihaylov_stas@kub.ru',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Есть ли у Вас ещё вопросы по заявке № 678250?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date2} ${timeFirst2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Да',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите интересующий Вас вопрос по заявке № 678906',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Как скорректировать заявку?',
+      'Как ускорить создание ОЗМ?',
+      'Когда будет создана ОЗМ?',
+      'Нет вопросов по данной заявке'
+    ],
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Запрашиваемая заявка выполнена без возможности корректировки. При необходимости создайте новую заявку.<br><span class="blueText">Регламент ведения основной записи материала и инструкция по созданию заявки</span>',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Еще вопросы по заявке № 678250?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Нет',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Благодарим за обращение',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date2} ${timeSecond2}`,
     'delay': mediumTiming
   },
 ]
@@ -203,13 +352,14 @@ const staffRedWebArgs2 = {
   dialogs: staffRedPhoneArgs2.dialogs
 }
 
-// работа в личном кабинете поставщика
+// узнать статус заявки на потребность
 const date3 = '13 апреля 2021'
-const timeFirst3 = '16:26'
+const timeFirst3 = '12:05'
+const timeSecond3 = '12:06'
 const staffDialog3 = [
   {
     'from': 'app',
-    'text': 'Приветствую! Я - цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежа?<br>В чем вопрос?',
+    'text': 'Приветствую. Опишите суть вопроса',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -219,12 +369,166 @@ const staffDialog3 = [
   },
   {
     'from': 'user',
-    'text': 'как добавить категории в личном кабинете',
+    'text': 'статус потребности',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Вам известен номер резервирования?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Да',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите номер резервирования',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': '29405644',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите интересующее Вас действие:',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Получить статус по всем позициям в exel',
+      'Получить статус по номеру позиции'
+    ],
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Получить статус по номеру позиции',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'укажите  позицию документа(ов) резервирования',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      '820005 Электродвигатель ELMASH 239',
+      '9004 Кабель КГ 4х1.5',
+      '9007 Кабель КГ 4х16'
+    ],
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите источник информации:',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Настоящий статус потребности (время запроса до 3 мин)',
+      'Статус потребности на 8.00 текущего дня (время запроса до 30 сек)'
+    ],
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Выберите нужное действие:',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Еще вопрос по данному резервированию',
+      'Информация по другому номеру резервирования',
+      'Завершение диалога'
+    ],
+    'time': `${date3} ${timeSecond3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [2],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeSecond3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Благодарим за обращение',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeSecond3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeSecond3}`,
     'delay': mediumTiming
   },
 ]
@@ -250,14 +554,14 @@ const staffRedWebArgs3 = {
   dialogs: staffRedPhoneArgs3.dialogs
 }
 
-// технические проблемы
+// скорректировать лимиты платежей
 const date4 = '21 апреля 2021'
-const timeFirst4 = '16:35'
-const timeSecond4 = '16:36'
+const timeFirst4 = '12:33'
+const timeSecond4 = '12:34'
 const staffDialog4 = [
   {
     'from': 'app',
-    'text': 'Приветствую!.Готов консультировать по вопросам получения статуса квалификации или статуса платежей.<br>Опишите суть вопроса',
+    'text': 'Приветствую. Опишите суть вопроса.',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -267,12 +571,165 @@ const staffDialog4 = [
   },
   {
     'from': 'user',
-    'text': 'у меня возникла ошибка при регистрации',
+    'text': 'лимиты в проектах',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите номер проекта (СПП-элемент верхнего уровня)',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': '12-1036',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите тему возможного запроса',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Ошибка при операции ввода лимита',
+      'Установить лимиты версии 80, 85 для проектов',
+      'Отключить лимиты Р1, Р2, G1, G2.',
+      'Загрузка лимитов'
+    ],
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Ошибка при операции ввода лимита',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Уточните, пожалуйста, запрос',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Превышение лимита ( Р1, Р2, G1, G2) при деблокировании СГ',
+      'Консультации по вводу лимитов на СПП',
+      'Отключить лимиты Р1, Р2, G1, G2'
+    ],
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Уточните, пожалуйста, запрос',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'Превышение лимита ( Р1, Р2, G1, G2) при деблокировании СГ',
+      'Консультации по вводу лимитов на СПП',
+      'Отключить лимиты Р1, Р2, G1, G2'
+    ],
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'По данному запросу найден документ: "Памятка по вводу и просмотру лимитов инвестиционной деятельности"  Для корректировки лимитов обратитесь к ответственным, уполномоченным выполнять такие операции: Иванова Мария, Петрова Авдотья',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Обращение в службу ИТ поддержки под номером 7100001629 со статусом Предложение по решению создано автоматически.',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Нужна информация по другому номеру проекта?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date4} ${timeFirst4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Нет',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeSecond4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Благодарим за обращение ',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeSecond4}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeSecond4}`,
     'delay': mediumTiming
   },
 ]
@@ -298,13 +755,14 @@ const staffRedWebArgs4 = {
   dialogs: staffRedPhoneArgs4.dialogs
 }
 
-// статус квалификации
+// исправить ошибки при вводе заявки на платеж или счет-фактуры
 const date5 = '23 апреля 2021'
-const timeFirst5 = '8:59'
+const timeFirst5 = '13:25'
+const timeSecond5 = '13:26'
 const staffDialog5 = [
   {
     'from': 'app',
-    'text': 'Приветствую! Я - цифровой помощник КУБ. Есть вопросы по статусу квалификации или статусу платежей.<br>Опишите суть вопроса.',
+    'text': 'Приветствую. Опишите суть вопроса',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -314,12 +772,122 @@ const staffDialog5 = [
   },
   {
     'from': 'user',
-    'text': 'нужен статус квалификации',
+    'text': 'заявка на платеж',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Укажите номер заказа на поставку',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': '4500359308',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Сумма резервирования средств меньше суммы, указанной в заказе на поставку',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Обновляем резервирование средств из заказа на поставку?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Да',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Проблема решена, сумма обновлена автоматически. Приступайте к формированию заявки на платеж',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Обращение в службу ИТ поддержки под номером 7100001642 со статусом Предложение по решению создано автоматически.',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Смотрим по другому заказу на поставку?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date5} ${timeFirst5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Нет',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeSecond5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Благодарим за обращение',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeSecond5}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date5} ${timeSecond5}`,
     'delay': mediumTiming
   },
 ]
@@ -345,13 +913,13 @@ const staffRedWebArgs5 = {
   dialogs: staffRedPhoneArgs5.dialogs
 }
 
-// статус платежа
+// разобраться с проблемой входа в SAP системы
 const date6 = '29 апреля 2021'
-const timeFirst6 = '6:50'
+const timeFirst6 = '15:00'
 const staffDialog6 = [
   {
     'from': 'app',
-    'text': 'Приветствую! Я — Цифровой помощник КУБ. Готов консультировать по статусу квалификации или статусу платежей.<br>Опишите суть вопроса',
+    'text': 'Приветсвую. Опишите суть вопроса',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -361,7 +929,71 @@ const staffDialog6 = [
   },
   {
     'from': 'user',
-    'text': 'оплата',
+    'text': 'не помню пароль',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Выберите платформу:',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': [
+      'SAP ERP',
+      'SAP SRM',
+      'SAP Solman'
+    ],
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': [0],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Хотите сбросить пароль?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Да',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Ваш логин: LP-A-wesd3<br>Ваш новый пароль: S(X9{lVbVr',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date6} ${timeFirst6}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -392,6 +1024,142 @@ const staffRedWebArgs6 = {
   dialogs: staffRedPhoneArgs6.dialogs
 }
 
+// узнайте статус образения в ServiceDesk
+const date7 = '29 апреля 2021'
+const timeFirst7 = '15:36'
+const staffDialog7 = [
+  {
+    'from': 'app',
+    'text': 'Приветствую! Опишите проблему или вопрос',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': shortTiming
+  },
+  {
+    'from': 'user',
+    'text': 'как с моим инцидентом',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Введите номер обращения',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': '1300000655',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'По Вашему обращению <b>1300000655</b><br>' + 
+      'Статус <b>Новое</b><br>' +
+      'Ответственный <b>Парамонова Лариса</b><br>' +
+      'Плановая/фактическая дата решения <b>13.07.2020</b><br>' +
+      '<br>' +
+      'Создан ЗНИ <b>1800000045</b><br>' +
+      'Статус ЗНИ <b>Отклонено</b><br>' + 
+      'Ответственный за ЗНИ<br>' + 
+      'Плановая/фактическая дата решения ЗНИ <b>14.07.2020</b><br>' +
+      '<br>' +
+      'Создан ЗНИ <b>2200000130</b><br>' +
+      'Статус ЗНИ <b>Новое</b><br>' +
+      'Ответственный за ЗНИ <b>Петров Дмитрий</b><br>' +
+      'Плановая/фактическая дата решения ЗНИ <b>15.07.2020</b><br>' +
+      '<br>' +
+      'Создана проблема <b>2300000005</b><br>'+
+      'Статус проблемы <b>Подтверждено</b><br>' +
+      'Ответственный за решение проблемы<br>' +
+      'Статус связанного обращения <b>Предложение по решению</b><br>' +
+      'Ответственный<br>' +
+      'Плановая/фактическая дата решения <b>17.07.2020</b><br>',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Проверим по другому номеру обращения?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': true,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Нет',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Благодарим за обращение',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date7} ${timeFirst7}`,
+    'delay': mediumTiming
+  },
+]
+
+const staffRedPhoneArgs7 = {
+  idElement: 'staffRPtriggerElement7',
+  idWebAnimToCreateTransformer: 'staffRedWebTriggerElement7',
+  type: 0,
+  dateChatingInHeader: date7,
+  headingChat: 'bot',
+  dateTime: `${date7} ${time7}`,
+  clock: time7,
+  dialogs: staffDialog7
+}
+const staffRedWebArgs7 = {
+  idElement: staffRedPhoneArgs7.idWebAnimToCreateTransformer,
+  idWebAnimToCreateTransformer: staffRedPhoneArgs7.idElement,
+  type: staffRedPhoneArgs7.type,
+  dateChatingInHeader: staffRedPhoneArgs7.dateChatingInHeader,
+  headingChat: staffRedPhoneArgs7.headingChat,
+  dateTime: staffRedPhoneArgs7.dateTime,
+  clock: staffRedPhoneArgs7.clock,
+  dialogs: staffRedPhoneArgs7.dialogs
+}
 
 ready(() => {
   // mob
