@@ -4,7 +4,7 @@ const mediumTiming = 3300
 const longTiming = 5000
 
 // участие в закупочных процедурах
-const date1 = '3 апреля 2021'
+const date1 = '5 апреля 2021'
 const timeFirst1 = '11:26'
 // const timeSecond1 = '11:27'
 const assistDialog1 = [
@@ -118,8 +118,8 @@ const assistRedPhoneArgs1 = {
   type: 0,
   dateChatingInHeader: date1,
   headingChat: 'bot',
-  dateTime: `${date1} ${time1}`,
-  clock: time1,
+  dateTime: `${date1} ${timeFirst1}`,
+  clock: timeFirst1,
   dialogs: assistDialog1
 }
 const assistRedWebArgs1 = {
@@ -235,8 +235,8 @@ const assistRedPhoneArgs2 = {
   type: 0,
   dateChatingInHeader: date2,
   headingChat: 'bot',
-  dateTime: `${date2} ${time2}`,
-  clock: time2,
+  dateTime: `${date2} ${timeFirst2}`,
+  clock: timeFirst2,
   dialogs: assistDialog2
 }
 const assistRedWebArgs2 = {
@@ -322,8 +322,8 @@ const assistRedPhoneArgs3 = {
   type: 0,
   dateChatingInHeader: date3,
   headingChat: 'bot',
-  dateTime: `${date3} ${time3}`,
-  clock: time3,
+  dateTime: `${date3} ${timeFirst3}`,
+  clock: timeFirst3,
   dialogs: assistDialog3
 }
 const assistRedWebArgs3 = {
@@ -410,8 +410,8 @@ const assistRedPhoneArgs4 = {
   type: 0,
   dateChatingInHeader: date4,
   headingChat: 'bot',
-  dateTime: `${date4} ${time4}`,
-  clock: time4,
+  dateTime: `${date4} ${timeFirst4}`,
+  clock: timeFirst4,
   dialogs: assistDialog4
 }
 const assistRedWebArgs4 = {
@@ -537,8 +537,8 @@ const assistRedPhoneArgs5 = {
   type: 0,
   dateChatingInHeader: date5,
   headingChat: 'bot',
-  dateTime: `${date5} ${time5}`,
-  clock: time5,
+  dateTime: `${date5} ${timeFirst5}`,
+  clock: timeFirst5,
   dialogs: assistDialog5
 }
 const assistRedWebArgs5 = {
@@ -578,7 +578,7 @@ const assistDialog6 = [
   },
   {
     'from': 'app',
-    'text': 'Укажите год регистрации договора на предприятии ( (формат ГГГГ, например 2020)',
+    'text': 'Укажите год регистрации договора на предприятии ( (формат ГГГГ, например 2021)',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -642,7 +642,7 @@ const assistDialog6 = [
   },
   {
     'from': 'app',
-    'text': 'Для предоставления информации о платежах за период, укажите даты начала и окончания периода в формате ДД.ММ.ГГГГ (например, 01.01.2020)<br>Укажите дату начала периода',
+    'text': 'Для предоставления информации о платежах за период, укажите даты начала и окончания периода в формате ДД.ММ.ГГГГ (например, 01.01.2021)<br>Укажите дату начала периода',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -652,7 +652,7 @@ const assistDialog6 = [
   },
   {
     'from': 'user',
-    'text': '16.06.2020',
+    'text': '16.04.2021',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -672,7 +672,7 @@ const assistDialog6 = [
   },
   {
     'from': 'user',
-    'text': '22.06.2020',
+    'text': '30.04.2021',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -682,7 +682,7 @@ const assistDialog6 = [
   },
   {
     'from': 'app',
-    'text': 'По результатам анализа периода с 16.06.2020 по 22.06.2020 по Договору 100099',
+    'text': 'По результатам анализа периода с 16.04.2021 по 30.04.2021 по Договору 100099',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -718,8 +718,8 @@ const assistRedPhoneArgs6 = {
   type: 0,
   dateChatingInHeader: date6,
   headingChat: 'bot',
-  dateTime: `${date6} ${time6}`,
-  clock: time6,
+  dateTime: `${date6} ${timeFirst6}`,
+  clock: timeFirst6,
   dialogs: assistDialog6
 }
 const assistRedWebArgs6 = {

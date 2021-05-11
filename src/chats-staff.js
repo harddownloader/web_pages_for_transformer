@@ -4,7 +4,7 @@ const mediumTiming = 3300
 const longTiming = 5000
 
 // найти инструкцию, долкумент
-const date1 = '3 апреля 2021'
+const date1 = '5 апреля 2021'
 const timeFirst1 = '12:00'
 const timeSecond1 = '12:01'
 const timeThird1 = '12:02'
@@ -141,8 +141,8 @@ const staffRedPhoneArgs1 = {
   type: 0,
   dateChatingInHeader: date1,
   headingChat: 'bot',
-  dateTime: `${date1} ${time1}`,
-  clock: time1,
+  dateTime: `${date1} ${timeFirst1}`,
+  clock: timeFirst1,
   dialogs: staffDialog1
 }
 const staffRedWebArgs1 = {
@@ -337,8 +337,8 @@ const staffRedPhoneArgs2 = {
   type: 0,
   dateChatingInHeader: date2,
   headingChat: 'bot',
-  dateTime: `${date2} ${time2}`,
-  clock: time2,
+  dateTime: `${date2} ${timeFirst2}`,
+  clock: timeFirst2,
   dialogs: staffDialog2
 }
 const staffRedWebArgs2 = {
@@ -539,8 +539,8 @@ const staffRedPhoneArgs3 = {
   type: 0,
   dateChatingInHeader: date3,
   headingChat: 'bot',
-  dateTime: `${date3} ${time3}`,
-  clock: time3,
+  dateTime: `${date3} ${timeFirst3}`,
+  clock: timeFirst3,
   dialogs: staffDialog3
 }
 const staffRedWebArgs3 = {
@@ -740,8 +740,8 @@ const staffRedPhoneArgs4 = {
   type: 0,
   dateChatingInHeader: date4,
   headingChat: 'bot',
-  dateTime: `${date4} ${time4}`,
-  clock: time4,
+  dateTime: `${date4} ${timeFirst4}`,
+  clock: timeFirst4,
   dialogs: staffDialog4
 }
 const staffRedWebArgs4 = {
@@ -898,8 +898,8 @@ const staffRedPhoneArgs5 = {
   type: 0,
   dateChatingInHeader: date5,
   headingChat: 'bot',
-  dateTime: `${date5} ${time5}`,
-  clock: time5,
+  dateTime: `${date5} ${timeFirst5}`,
+  clock: timeFirst5,
   dialogs: staffDialog5
 }
 const staffRedWebArgs5 = {
@@ -1009,8 +1009,8 @@ const staffRedPhoneArgs6 = {
   type: 0,
   dateChatingInHeader: date6,
   headingChat: 'bot',
-  dateTime: `${date6} ${time6}`,
-  clock: time6,
+  dateTime: `${date6} ${timeFirst6}`,
+  clock: timeFirst6,
   dialogs: staffDialog6
 }
 const staffRedWebArgs6 = {
@@ -1025,7 +1025,7 @@ const staffRedWebArgs6 = {
 }
 
 // узнайте статус образения в ServiceDesk
-const date7 = '29 апреля 2021'
+const date7 = '12 апреля 2021'
 const timeFirst7 = '15:36'
 const staffDialog7 = [
   {
@@ -1073,24 +1073,24 @@ const staffDialog7 = [
     'text': 'По Вашему обращению <b>1300000655</b><br>' + 
       'Статус <b>Новое</b><br>' +
       'Ответственный <b>Парамонова Лариса</b><br>' +
-      'Плановая/фактическая дата решения <b>13.07.2020</b><br>' +
+      'Плановая/фактическая дата решения <b>13.03.2021</b><br>' +
       '<br>' +
       'Создан ЗНИ <b>1800000045</b><br>' +
       'Статус ЗНИ <b>Отклонено</b><br>' + 
       'Ответственный за ЗНИ<br>' + 
-      'Плановая/фактическая дата решения ЗНИ <b>14.07.2020</b><br>' +
+      'Плановая/фактическая дата решения ЗНИ <b>14.03.2021</b><br>' +
       '<br>' +
       'Создан ЗНИ <b>2200000130</b><br>' +
       'Статус ЗНИ <b>Новое</b><br>' +
       'Ответственный за ЗНИ <b>Петров Дмитрий</b><br>' +
-      'Плановая/фактическая дата решения ЗНИ <b>15.07.2020</b><br>' +
+      'Плановая/фактическая дата решения ЗНИ <b>15.03.2021</b><br>' +
       '<br>' +
       'Создана проблема <b>2300000005</b><br>'+
       'Статус проблемы <b>Подтверждено</b><br>' +
       'Ответственный за решение проблемы<br>' +
       'Статус связанного обращения <b>Предложение по решению</b><br>' +
       'Ответственный<br>' +
-      'Плановая/фактическая дата решения <b>17.07.2020</b><br>',
+      'Плановая/фактическая дата решения <b>17.03.2021</b><br>',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -1146,8 +1146,8 @@ const staffRedPhoneArgs7 = {
   type: 0,
   dateChatingInHeader: date7,
   headingChat: 'bot',
-  dateTime: `${date7} ${time7}`,
-  clock: time7,
+  dateTime: `${date7} ${timeFirst7}`,
+  clock: timeFirst7,
   dialogs: staffDialog7
 }
 const staffRedWebArgs7 = {

@@ -7,9 +7,9 @@ var ready = (callback) => {
   const redWebArgs1 = {
     idElement: 'redWebTriggerElement1',
     type: 0,
-    dateChatingInHeader: '1 июля 2020',
+    dateChatingInHeader: '1 июля 2021',
     headingChat: 'статус заявки',
-    dateTime: '23 июня 2020 18:13',
+    dateTime: '23 июня 2021 18:13',
     clock: '18:13',
     dialogs: [{
         'from': 'app',
@@ -18,7 +18,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 1000
       },
       {
@@ -28,7 +28,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -40,7 +40,7 @@ var ready = (callback) => {
         'options': ['Статус выполнения потребности на закупку',
           'Проверить статус заявки на создание ОЗМ'
         ],
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -50,7 +50,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -60,7 +60,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -70,7 +70,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -80,7 +80,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -90,7 +90,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -100,7 +100,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -114,7 +114,7 @@ var ready = (callback) => {
           'Когда будет создана ОЗМ?',
           'Нет вопросов по данной заявке'
         ],
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -124,7 +124,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -134,7 +134,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -144,7 +144,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': true,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -154,7 +154,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -164,7 +164,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
       {
@@ -174,7 +174,7 @@ var ready = (callback) => {
         'descr': '',
         'icon': '',
         'options': false,
-        'time': '23 июня 2020 18:13',
+        'time': '23 июня 2021 18:13',
         'delay': 3300
       },
     ]
