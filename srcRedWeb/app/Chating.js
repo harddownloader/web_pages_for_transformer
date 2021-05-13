@@ -330,7 +330,8 @@ export class Chating {
       if (delayScroll !== 0) {
         await timeout(delayScroll)
       } else {
-        pxToScrollTop = 100
+        // на сколько пикселей двигается скролл при каждой рекурсии
+        pxToScrollTop = 300
       }
       
 
