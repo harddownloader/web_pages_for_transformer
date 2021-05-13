@@ -338,7 +338,7 @@ export class Chating {
       let scrollTopOld = document.querySelector('.simplebar-content-wrapper')
         .scrollTop
       document.querySelector('.simplebar-content-wrapper').scrollTop =
-        5 + scrollTopOld
+        pxToScrollTop + scrollTopOld
       let getCurrentScrollTop = document.querySelector(
         '.simplebar-content-wrapper'
       ).scrollTop

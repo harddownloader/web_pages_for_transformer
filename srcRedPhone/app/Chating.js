@@ -416,24 +416,26 @@ export class Chating {
     new BuildPhone().setInputField() // ставим "placeholder" полю ввода
 
     // Scroll
-    async function AnimationScrollInRecursion(i) {
+    async function AnimationScrollInRecursion(i, delayScroll) {
       const timeout = (ms) =>
         new Promise((resolve) =>
           window.timerHub.setTimeout('preBuildMessageApp', resolve, ms)
         )
 
-      let delayScroll = 25
+      console.log('AnimationScrollInRecursion - delayScroll', delayScroll)
 
-      if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-        delayScroll = 0
+      let pxToScrollTop = 5
+      if (delayScroll !== 0) {
+        await timeout(delayScroll)
+      } else {
+        // на сколько пикселей двигается скролл при каждой рекурсии
+        pxToScrollTop = 300
       }
-
-      await timeout(delayScroll)
 
       let scrollTopOld = document.querySelector('.simplebar-content-wrapper')
           .scrollTop
       document.querySelector('.simplebar-content-wrapper').scrollTop =
-        5 + scrollTopOld
+        pxToScrollTop + scrollTopOld
       let getCurrentScrollTop = document.querySelector(
           '.simplebar-content-wrapper'
       ).scrollTop
@@ -460,12 +462,19 @@ export class Chating {
       } else {
         // продолжаем переть скролл
         i = i + 0.5
-        await AnimationScrollInRecursion(i)
+        await AnimationScrollInRecursion(i, delayScroll)
       }
     }
 
     if (document.querySelectorAll('.chat-column').length > 1) {
-      AnimationScrollInRecursion(0)
+      let delayScroll = 25
+
+      if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+        delayScroll = 0
+      }
+      console.log('delayScroll', delayScroll)
+      
+      AnimationScrollInRecursion(0, delayScroll)
     }
 
     markCurrentMessageAsUsed(dialogs, i_forTimer)
