@@ -383,7 +383,7 @@ const staffDialog3 = [
     'second_text': '',
     'descr': '',
     'icon': '',
-    'options': false,
+    'options': true,
     'time': `${date3} ${timeFirst3}`,
     'delay': mediumTiming
   },
@@ -479,7 +479,22 @@ const staffDialog3 = [
   },
   {
     'from': 'user',
-    'text': [0],
+    'text': [1],
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date3} ${timeFirst3}`,
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 
+      'По резервированию 29400044<br>' +
+      'Материал 820005' +
+      'Создан заказ на поставку 4500000060. ' +
+      'К сожалению, на текущий момент поставщик срывает поставку, запланированную на 15.04.2021. ' +
+      'Для уточнения актуальной информации по ожидаемым срокам поставки Вам необходимо обратиться к создателю заказа Юлия Симонова',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -616,7 +631,7 @@ const staffDialog4 = [
   },
   {
     'from': 'user',
-    'text': 'Ошибка при операции ввода лимита',
+    'text': [0],
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -1106,7 +1121,7 @@ const staffDialog7 = [
     'icon': '',
     'options': true,
     'time': `${date7} ${timeFirst7}`,
-    'delay': mediumTiming
+    'delay': longTiming
   },
   {
     'from': 'user',

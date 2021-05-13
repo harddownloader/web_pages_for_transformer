@@ -3,7 +3,7 @@
 const hrDialog1 = [
   {
     'from': 'app',
-    'text': 'Приветствую. Опишите суть вопроса.',
+    'text': 'Приветствую. Опиши суть вопроса.',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -83,7 +83,7 @@ const hrDialog1 = [
   },
   {
     'from': 'app',
-    'text': 'Благодарим за обращение<br>Завершаем сессию',
+    'text': 'Благодарю за обращение',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -109,7 +109,7 @@ const hrRedPhoneArgs1 = {
 const hrDialog2 = [
   {
     'from': 'app',
-    'text': 'Приветствую. Опишите суть вопроса.',
+    'text': 'Приветствую. Опиши суть вопроса.',
     'second_text': '',
     'descr': '',
     'icon': '',

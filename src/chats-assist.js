@@ -84,7 +84,7 @@ const assistDialog1 = [
     'second_text': '',
     'descr': '',
     'icon': '',
-    'options': true,
+    'options': false,
     'time': `${date1} ${timeFirst1}`,
     'delay': mediumTiming
   },
@@ -94,7 +94,7 @@ const assistDialog1 = [
     'second_text': '',
     'descr': '',
     'icon': '',
-    'options': false,
+    'options': true,
     'time': `${date1} ${timeFirst1}`,
     'delay': mediumTiming
   },
@@ -199,7 +199,7 @@ const assistDialog2 = [
   },
   {
     'from': 'app',
-    'text': 'Для уточнения текущего статуса квалификации задайте мне вопрос, либо воспользуйтесь формой обратной связи.',
+    'text': 'Для уточнения текущего статуса квалификации задайте мне вопрос, либо воспользуйтесь <span class="blueText">формой обратной связи</span>.',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -402,6 +402,16 @@ const assistDialog4 = [
     'time': `${date4} ${timeSecond4}`,
     'delay': mediumTiming
   },
+  {
+    'from': 'app',
+    'text': 'Завершаем сессию',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date4} ${timeSecond4}`,
+    'delay': mediumTiming
+  },
 ]
 
 const assistRedPhoneArgs4 = {
@@ -511,7 +521,7 @@ const assistDialog5 = [
   },
   {
     'from': 'app',
-    'text': 'Если остались вопросы у Вас есть возможность обратиться к нам через форму обратной связи',
+    'text': 'Если остались вопросы у Вас есть возможность обратиться к нам через <span class="blueText">форму обратной связи</span>',
     'second_text': '',
     'descr': '',
     'icon': '',

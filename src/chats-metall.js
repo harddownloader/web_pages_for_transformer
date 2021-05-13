@@ -57,11 +57,11 @@ const metallDialogs1 = [
   },
   {
     'from': 'user',
-    'text': '',
+    'text': [0],
     'second_text': '',
     'descr': '',
     'icon': '',
-    'options': [0],
+    'options': false,
     'time': '22 сентября 2021 8:21', 
     'delay': 5000
   },

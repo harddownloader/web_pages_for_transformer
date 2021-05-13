@@ -191,7 +191,7 @@ export class Chating {
             '<span>RUB</span>' +
             '<span class="without_border">266</span>' +
             '<span class="without_border">Оплачен</span>' +
-            '<span class="without_border">18.06.2021</span>' +
+            '<span class="without_border">18.04.2021</span>' +
             '<span class="without_border">20250.00</span>' +
             '<span class="without_border">RUB</span>' +
             '</div>' +
