@@ -389,8 +389,8 @@ export class Chating {
     console.log('buildMessage - delay', delay)
     if(delay === 0) {
       fadeInDuration = 0
-      markCurrentMessageAsUsed(dialogs, i_forTimer)
     }
+    markCurrentMessageAsUsed(dialogs, i_forTimer)
     
 
     var count = chat_columns.length - 1
