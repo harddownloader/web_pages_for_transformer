@@ -328,6 +328,7 @@ export class Chating {
 
       if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
         delayScroll = 0
+        debugger
       }
 
       await timeout(delayScroll)
