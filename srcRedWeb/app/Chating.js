@@ -803,6 +803,16 @@ export class Chating {
             document.getElementById('chatContent')
           )
         }
+
+        // если мы трансформаровались с другой анимации, то скрываем поле ввода, на момент проктурки всех сообщений
+        if (checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
+          document.querySelector('#getter').style.display = 'none'
+        } else {
+          document.querySelector('#getter').style.display = 'flex';
+        }
+
+
+
         // ТЕЛО
         console.log('turn no. ' + i_forTimer)
         var text = null
