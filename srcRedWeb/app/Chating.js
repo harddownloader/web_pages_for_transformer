@@ -318,19 +318,11 @@ export class Chating {
     new BuildPhone().setInputField() // ставим "placeholder" полю ввода
 
     // Scroll
-    async function AnimationScrollInRecursion(i) {
+    async function AnimationScrollInRecursion(i, delayScroll) {
       const timeout = (ms) =>
         new Promise((resolve) =>
           window.timerHub.setTimeout('preBuildMessageApp', resolve, ms)
         )
-
-      let delayScroll = 25
-
-      if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-        delayScroll = 0
-        debugger
-      }
-      console.log('delayScroll', delayScroll)
 
       await timeout(delayScroll)
 
@@ -369,7 +361,14 @@ export class Chating {
     }
 
     if (document.querySelectorAll('.chat-column').length > 1) {
-      AnimationScrollInRecursion(0)
+      let delayScroll = 25
+
+      if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+        delayScroll = 0
+      }
+      console.log('delayScroll', delayScroll)
+
+      AnimationScrollInRecursion(0, delayScroll)
     }
 
     markCurrentMessageAsUsed(dialogs, i_forTimer)
