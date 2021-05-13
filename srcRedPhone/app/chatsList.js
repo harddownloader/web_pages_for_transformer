@@ -12,6 +12,14 @@ export class ChatsList {
   init(bp, dialogs) {
     this.bp = bp
     this.dialogs = dialogs
+
+    // set current dialog to LS
+    if (!localStorage.getItem('currentAnimationDialog')) {
+      localStorage.setItem('currentAnimationDialog', JSON.stringify(dialogs))
+    } else {
+      this.hideChatListHtml()
+    }
+
     // show html
     this.create()
     // wait click event
@@ -20,11 +28,6 @@ export class ChatsList {
       console.log('click to need item')
       document.querySelector(this.needChatItemId).classList.toggle('active')
 
-      if (!localStorage.getItem('currentAnimationDialog')) {
-        localStorage.setItem('currentAnimationDialog', JSON.stringify(dialogs))
-      }
-      
-      
       // rm chats list
       setTimeout(() => {
         this.destroy()
@@ -79,19 +82,27 @@ export class ChatsList {
     await new Chating().CreateAnimationChating(this.dialogs) // создание анимации переписки
   }
 
+  hideChatListHtml() {
+    document.querySelector('.chats-list').style.display = 'none'
+    document.querySelector('.sections-app-wrapp').style.display = 'none'
+    document.querySelector('.app-header').style.display = 'none'
+  }
+
   destroy() {
     console.log('destroyChatsList')
     document.querySelector('.chat-list-version').classList.toggle('chat-list-version')
     document.querySelector('.chatContent').classList.toggle('whiteBg')
     document.querySelector('.chatContent').classList.toggle('grayBg')
-    document.querySelector('.chats-list').style.display = 'none'
+    
+    this.hideChatListHtml()
+
     document.querySelector('.chatHeader').style.display = 'flex'
     document.querySelector('.chatContentWrapper').style.display = 'block'
     document.querySelector('#chat-ui-input').style.display = 'flex'
     document.querySelector('.bottom-ui').style.display = 'flex'
 
-    document.querySelector('.sections-app-wrapp').style.display = 'none'
-    document.querySelector('.app-header').style.display = 'none'
+    // document.querySelector('.sections-app-wrapp').style.display = 'none'
+    // document.querySelector('.app-header').style.display = 'none'
 
     // run animation redirect to chat
     this.runTransitionAnimation()
