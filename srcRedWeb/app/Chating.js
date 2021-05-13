@@ -325,7 +325,14 @@ export class Chating {
         )
 
       console.log('AnimationScrollInRecursion - delayScroll', delayScroll)
-      await timeout(delayScroll)
+
+      let pxToScrollTop = 5
+      if (delayScroll !== 0) {
+        await timeout(delayScroll)
+      } else {
+        pxToScrollTop = 100
+      }
+      
 
       let scrollTopOld = document.querySelector('.simplebar-content-wrapper')
         .scrollTop
