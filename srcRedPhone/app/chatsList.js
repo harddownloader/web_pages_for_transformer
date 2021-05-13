@@ -19,6 +19,11 @@ export class ChatsList {
     document.querySelector(this.needChatItemId).addEventListener('click', (event) => {
       console.log('click to need item')
       document.querySelector(this.needChatItemId).classList.toggle('active')
+
+      if (!localStorage.getItem('currentAnimationDialog')) {
+        localStorage.setItem('currentAnimationDialog', JSON.stringify(dialogs))
+      }
+      
       
       // rm chats list
       setTimeout(() => {
@@ -39,17 +44,34 @@ export class ChatsList {
     const isChatsList = true
     this.bp.ResizeActivator(isChatsList)
 
+    let delayBafereClickOnChatListItem = 2000
+
+    if (localStorage.getItem('currentAnimationDialog')) {
+      delayBafereClickOnChatListItem = 0
+    }
+
     //  через время активируем диалог, как буд-то произошел клик
     setTimeout(() => {
-      document.querySelector(this.needChatItemId).click()
-    }, 2000)
+      if(document.querySelector(this.needChatItemId)) {
+        document.querySelector(this.needChatItemId).click()
+      }
+    }, delayBafereClickOnChatListItem)
   }
 
   runTransitionAnimation() {
     console.log('runAnimation')
+
+    let delayTransitionAnimationFromChatListToChat = 400
+
+    if (localStorage.getItem('currentAnimationDialog')) {
+      delayTransitionAnimationFromChatListToChat = 0
+    }
+
     setTimeout(() => {
-      document.querySelector('.chatContentWrapper').classList.toggle('activeChat')
-    }, 400)
+      if(document.querySelector('.chatContentWrapper')) {
+        document.querySelector('.chatContentWrapper').classList.toggle('activeChat')
+      }
+    }, delayTransitionAnimationFromChatListToChat)
   }
 
   async runChatingAnimation() {

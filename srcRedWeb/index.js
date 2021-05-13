@@ -174,6 +174,7 @@ require('./styles/stylus/main.styl')
       document.getElementById('chat-box').addEventListener('click', (event) => {
         event.stopPropagation()
         if (this.isOutSideContainer(event.target.id)) {
+          localStorage.removeItem('currentAnimationDialog');
           this.destroyChatWebAnim(elementID)
         }
       })

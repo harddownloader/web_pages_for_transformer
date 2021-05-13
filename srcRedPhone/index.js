@@ -151,6 +151,7 @@ require('./styles/stylus/main.styl')
     closeAnimationEvent(elementID) {
       // если кликаем по контейнеру вокруг телефона(т.е. в любое место ,только не на телефон), то закрываться анимация
       document.getElementById('overlay').addEventListener('click', () => {
+        localStorage.removeItem('currentAnimationDialog');
         this.closeAnimationAction(elementID)
       })
     }
