@@ -211,6 +211,11 @@ module.exports = {
           from: path.resolve(__dirname, 'src/webpage'),
           to: 'webpage',
         },
+        {
+          // chats-configs
+          from: path.resolve(__dirname, 'src/chats-configs'),
+          to: 'chats-configs',
+        },
       ],
     }),
     !devMode
