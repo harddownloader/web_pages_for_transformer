@@ -289,6 +289,7 @@ export class Chating {
 
     let fadeInDuration = 1000
 
+    console.log('buildMessage - delay', delay)
     if(delay === 0) {
       fadeInDuration = 0
       markCurrentMessageAsUsed(dialogs, i_forTimer)

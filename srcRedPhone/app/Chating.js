@@ -386,6 +386,7 @@ export class Chating {
 
     let fadeInDuration = 1000
 
+    console.log('buildMessage - delay', delay)
     if(delay === 0) {
       fadeInDuration = 0
       markCurrentMessageAsUsed(dialogs, i_forTimer)
@@ -534,7 +535,6 @@ export class Chating {
 
       if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
         delay = 0
-        debugger
       }
 
       await timeout(delay)
@@ -735,13 +735,12 @@ export class Chating {
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
           if(localStorage.getItem('mob_first_part_user_msg') ) {
             localStorage.removeItem('mob_first_part_user_msg')
-            markCurrentMessageAsUsed(dialogs, i_forTimer)
+            // markCurrentMessageAsUsed(dialogs, i_forTimer)
           }
           localStorage.setItem('mob_first_part_user_msg', 'true')
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
-          debugger
         }
 
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ? - ДА
@@ -782,7 +781,6 @@ export class Chating {
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
-          debugger
         }
 
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ - НЕТ
@@ -842,7 +840,6 @@ export class Chating {
       localStorage.setItem('mob_first_part_app_msg', 'true')
     } else {
       delay = 0
-      debugger
     }
 
     timeTimeout = delay
