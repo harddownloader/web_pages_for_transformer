@@ -436,6 +436,7 @@ export class Chating {
 
       if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
         delay = 0
+        debugger
       }
 
       await timeout(delay)
@@ -639,6 +640,7 @@ export class Chating {
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
+          debugger
         }
 
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ? - ДА
@@ -678,6 +680,7 @@ export class Chating {
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
+          debugger
         }
 
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ - НЕТ
@@ -736,6 +739,7 @@ export class Chating {
       localStorage.setItem('web_first_part_app_msg', 'true')
     } else {
       delay = 0
+      debugger
     }
       
     timeTimeout = delay
