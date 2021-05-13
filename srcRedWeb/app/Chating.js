@@ -293,7 +293,7 @@ export class Chating {
     if(delay === 0) {
       fadeInDuration = 0
     }
-    markCurrentMessageAsUsed(dialogs, i_forTimer)
+    
 
     var count = chat_columns.length - 1
     new FX().fadeIn(chat_columns[count], {
@@ -369,6 +369,8 @@ export class Chating {
     if (document.querySelectorAll('.chat-column').length > 1) {
       AnimationScrollInRecursion(0)
     }
+
+    markCurrentMessageAsUsed(dialogs, i_forTimer)
   }
 
   /**

@@ -390,7 +390,7 @@ export class Chating {
     if(delay === 0) {
       fadeInDuration = 0
     }
-    markCurrentMessageAsUsed(dialogs, i_forTimer)
+    
     
 
     var count = chat_columns.length - 1
@@ -467,6 +467,8 @@ export class Chating {
     if (document.querySelectorAll('.chat-column').length > 1) {
       AnimationScrollInRecursion(0)
     }
+
+    markCurrentMessageAsUsed(dialogs, i_forTimer)
   }
 
   /**
