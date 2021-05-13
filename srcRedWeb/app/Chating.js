@@ -257,7 +257,9 @@ export class Chating {
     dialog,
     time,
     options,
-    delay
+    delay,
+    dialogs,
+    i_forTimer
   ) {
     var msg_list = document.getElementsByClassName('chatContentWrapper')
 
@@ -320,7 +322,13 @@ export class Chating {
           window.timerHub.setTimeout('preBuildMessageApp', resolve, ms)
         )
 
-      await timeout(25)
+      let delayScroll = 25
+
+      if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+        delayScroll = 0
+      }
+
+      await timeout(delayScroll)
 
       let scrollTopOld = document.querySelector('.simplebar-content-wrapper')
         .scrollTop
@@ -622,11 +630,11 @@ export class Chating {
         let timeoutBeforeSendMessage = 100
 
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
-          if(localStorage.getItem('first_part_user_msg') ) {
-            localStorage.removeItem('first_part_user_msg')
+          if(localStorage.getItem('web_first_part_user_msg') ) {
+            localStorage.removeItem('web_first_part_user_msg')
             markCurrentMessageAsUsed(dialogs, i_forTimer)
           }
-          localStorage.setItem('first_part_user_msg', 'true')
+          localStorage.setItem('web_first_part_user_msg', 'true')
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
@@ -656,7 +664,9 @@ export class Chating {
           text_dialog,
           time,
           options,
-          delay
+          delay,
+          dialogs,
+          i_forTimer
         )
       } else {
 
@@ -718,11 +728,11 @@ export class Chating {
     //   delay = 0
     // }
     if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
-      if(localStorage.getItem('first_part_app_msg') ) {
-        localStorage.removeItem('first_part_app_msg')
+      if(localStorage.getItem('web_first_part_app_msg') ) {
+        localStorage.removeItem('web_first_part_app_msg')
         markCurrentMessageAsUsed(dialogs, i_forTimer)
       }
-      localStorage.setItem('first_part_app_msg', 'true')
+      localStorage.setItem('web_first_part_app_msg', 'true')
     } else {
       delay = 0
     }
@@ -741,7 +751,9 @@ export class Chating {
       text_dialog,
       time,
       options,
-      delay
+      delay,
+      dialogs,
+      i_forTimer
     )
 
     return
@@ -809,7 +821,6 @@ export class Chating {
             simplebar
           )
         } else if (who === 'app') {
-          console.log('before preBuildMessageApp2')
           await vm.preBuildMessageApp(
             text,
             timeTimeout,

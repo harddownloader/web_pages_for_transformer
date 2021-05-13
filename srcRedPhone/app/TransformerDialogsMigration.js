@@ -19,9 +19,9 @@ export function markCurrentMessageAsUsed (dialogs, i_forTimer) {
       }
     } else if (typeof lsDialogs[i_forTimer].text === 'string') {
       if (lsDialogs[i_forTimer].text === dialogs[i_forTimer].text ) {
-        console.log('текста равны && нет свойства used,т.е. диалог не использваолся')
-        console.log('item.text', lsDialogs[i_forTimer].text)
-        console.log('dialogs[i_forTimer].text', dialogs[i_forTimer].text)
+        // console.log('текста равны && нет свойства used,т.е. диалог не использваолся')
+        // console.log('item.text', lsDialogs[i_forTimer].text)
+        // console.log('dialogs[i_forTimer].text', dialogs[i_forTimer].text)
         lsDialogs[i_forTimer].used = true
         localStorage.setItem('currentAnimationDialog', JSON.stringify(lsDialogs))
         return true

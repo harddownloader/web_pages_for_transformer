@@ -152,11 +152,11 @@ export class Chating {
       avatarIconPicture.appendChild(avatarIconSourceWebp)
       avatarIconPicture.appendChild(avatarIconSourcePng)
       avatarIconPicture.appendChild(avatarIconImg)
-      console.log('avatarIconPicture', avatarIconPicture)
+      // console.log('avatarIconPicture', avatarIconPicture)
       avatarIconWrap.appendChild(avatarIconPicture)
-      console.log('avatarIconWrap', avatarIconWrap)
+      // console.log('avatarIconWrap', avatarIconWrap)
       avatarWrap.appendChild(avatarIconWrap)
-      console.log('avatarWrap', avatarWrap)
+      // console.log('avatarWrap', avatarWrap)
 
       AppIcon = avatarWrap
     }
@@ -715,18 +715,32 @@ export class Chating {
     // eslint-disable-next-line no-async-promise-executor
     return new Promise(async (resolve, reject) => {
 
-      let timeoutBeforeSendMessage = 100
+      // let timeoutBeforeSendMessage = 100
 
-      if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-        // markCurrentMessageAsUsed(dialogs, i_forTimer)
-      } else {
-        timeoutBeforeSendMessage = 0
-        delay = 0
-      }
+      // if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+      //   // markCurrentMessageAsUsed(dialogs, i_forTimer)
+      // } else {
+      //   timeoutBeforeSendMessage = 0
+      //   delay = 0
+      // }
 
 
       // ГЛАВНОЕ УСЛОВИЕ
       if (a >= text.length) {
+
+        let timeoutBeforeSendMessage = 100
+
+        if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
+          if(localStorage.getItem('mob_first_part_user_msg') ) {
+            localStorage.removeItem('mob_first_part_user_msg')
+            markCurrentMessageAsUsed(dialogs, i_forTimer)
+          }
+          localStorage.setItem('mob_first_part_user_msg', 'true')
+        } else {
+          timeoutBeforeSendMessage = 0
+          delay = 0
+        }
+
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ? - ДА
 
         await timeout(timeoutBeforeSendMessage)
@@ -757,9 +771,20 @@ export class Chating {
             i_forTimer
         )
       } else {
+
+        let timeoutBeforeSendMessage = 100
+
+        if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+          markCurrentMessageAsUsed(dialogs, i_forTimer)
+        } else {
+          timeoutBeforeSendMessage = 0
+          delay = 0
+        }
+
         // ЗАПОЛНИЛИ ЛИ МЫ ПОЛЕ - НЕТ
 
         await vm.chatinUserAnimation(a, text, timeTimeout, delay, dialogs, i_forTimer)
+        console.log('mobile - preBuildMessageUser - before preBuildMessageUser')
         await vm.preBuildMessageUser(
             (a = text.length),
             text,
@@ -800,8 +825,17 @@ export class Chating {
         window.timerHub.setTimeout('preBuildMessageApp', resolve, ms)
       )
     
-    if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-      // markCurrentMessageAsUsed(dialogs, i_forTimer)
+    // if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
+    //   // markCurrentMessageAsUsed(dialogs, i_forTimer)
+    // } else {
+    //   delay = 0
+    // }
+    if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
+      if(localStorage.getItem('mob_first_part_app_msg') ) {
+        localStorage.removeItem('mob_first_part_app_msg')
+        markCurrentMessageAsUsed(dialogs, i_forTimer)
+      }
+      localStorage.setItem('mob_first_part_app_msg', 'true')
     } else {
       delay = 0
     }
@@ -862,6 +896,7 @@ export class Chating {
 
         let who = dialogs[i_forTimer].from
         if (who === 'user') {
+          console.log('mobile - CreateAnimationChating - before preBuildMessageUser')
           await vm.preBuildMessageUser(
               a,
               text,
