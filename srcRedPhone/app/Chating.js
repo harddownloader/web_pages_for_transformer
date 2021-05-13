@@ -473,7 +473,7 @@ export class Chating {
         delayScroll = 0
       }
       console.log('delayScroll', delayScroll)
-      
+
       AnimationScrollInRecursion(0, delayScroll)
     }
 
@@ -891,6 +891,14 @@ export class Chating {
     var timerFunc = function(i_forTimer) {
       return async function() {
         if (i_forTimer >= dialogs.length) return
+
+        // если мы трансформаровались с другой анимации, то скрываем поле ввода, на момент проктурки всех сообщений
+        if (checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
+          document.querySelector('#getter').style.display = 'none'
+        } else {
+          document.querySelector('#getter').style.display = 'flex';
+        }
+
         // ТЕЛО
         console.log('turn no. ' + i_forTimer)
         var text = null
