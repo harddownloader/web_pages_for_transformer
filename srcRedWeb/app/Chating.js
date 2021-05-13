@@ -357,7 +357,7 @@ export class Chating {
       } else {
         // продолжаем переть скролл
         i = i + 0.5
-        await AnimationScrollInRecursion(i)
+        await AnimationScrollInRecursion(i, delayScroll)
       }
     }
 
