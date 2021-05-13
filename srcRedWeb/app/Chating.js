@@ -330,6 +330,7 @@ export class Chating {
         delayScroll = 0
         debugger
       }
+      console.log('delayScroll', delayScroll)
 
       await timeout(delayScroll)
 
