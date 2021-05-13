@@ -291,6 +291,7 @@ export class Chating {
 
     if(delay === 0) {
       fadeInDuration = 0
+      markCurrentMessageAsUsed(dialogs, i_forTimer)
     }
 
     var count = chat_columns.length - 1
@@ -632,7 +633,7 @@ export class Chating {
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
           if(localStorage.getItem('web_first_part_user_msg') ) {
             localStorage.removeItem('web_first_part_user_msg')
-            markCurrentMessageAsUsed(dialogs, i_forTimer)
+            // markCurrentMessageAsUsed(dialogs, i_forTimer)
           }
           localStorage.setItem('web_first_part_user_msg', 'true')
         } else {
@@ -673,7 +674,7 @@ export class Chating {
         let timeoutBeforeSendMessage = 100
 
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-          markCurrentMessageAsUsed(dialogs, i_forTimer)
+          // markCurrentMessageAsUsed(dialogs, i_forTimer)
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
@@ -730,7 +731,7 @@ export class Chating {
     if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
       if(localStorage.getItem('web_first_part_app_msg') ) {
         localStorage.removeItem('web_first_part_app_msg')
-        markCurrentMessageAsUsed(dialogs, i_forTimer)
+        // markCurrentMessageAsUsed(dialogs, i_forTimer)
       }
       localStorage.setItem('web_first_part_app_msg', 'true')
     } else {

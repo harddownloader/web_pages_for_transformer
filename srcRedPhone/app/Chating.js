@@ -388,6 +388,7 @@ export class Chating {
 
     if(delay === 0) {
       fadeInDuration = 0
+      markCurrentMessageAsUsed(dialogs, i_forTimer)
     }
     
 
@@ -775,7 +776,7 @@ export class Chating {
         let timeoutBeforeSendMessage = 100
 
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
-          markCurrentMessageAsUsed(dialogs, i_forTimer)
+          // markCurrentMessageAsUsed(dialogs, i_forTimer)
         } else {
           timeoutBeforeSendMessage = 0
           delay = 0
@@ -833,7 +834,7 @@ export class Chating {
     if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
       if(localStorage.getItem('mob_first_part_app_msg') ) {
         localStorage.removeItem('mob_first_part_app_msg')
-        markCurrentMessageAsUsed(dialogs, i_forTimer)
+        // markCurrentMessageAsUsed(dialogs, i_forTimer)
       }
       localStorage.setItem('mob_first_part_app_msg', 'true')
     } else {
