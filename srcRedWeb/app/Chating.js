@@ -324,6 +324,7 @@ export class Chating {
           window.timerHub.setTimeout('preBuildMessageApp', resolve, ms)
         )
 
+      console.log('AnimationScrollInRecursion - delayScroll', delayScroll)
       await timeout(delayScroll)
 
       let scrollTopOld = document.querySelector('.simplebar-content-wrapper')
