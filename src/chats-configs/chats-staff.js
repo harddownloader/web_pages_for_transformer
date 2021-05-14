@@ -1176,6 +1176,23 @@ const staffRedWebArgs7 = {
   dialogs: staffRedPhoneArgs7.dialogs
 }
 
+// чистим ls от сигналов трансформации анимации
+if (localStorage.getItem('currentAnimationDialog')) {
+  localStorage.removeItem('currentAnimationDialog');
+}
+if (localStorage.getItem('mob_first_part_user_msg')) {
+  localStorage.removeItem('mob_first_part_user_msg')
+}
+if (localStorage.getItem('mob_first_part_app_msg')) {
+  localStorage.removeItem('mob_first_part_app_msg')
+}
+if (localStorage.getItem('web_first_part_user_msg')) {
+  localStorage.removeItem('web_first_part_user_msg')
+}
+if (localStorage.getItem('web_first_part_app_msg')) {
+  localStorage.removeItem('web_first_part_app_msg')
+}
+
 ready(() => {
   // mob
   new RedPhoneAnimation(staffRedPhoneArgs1)

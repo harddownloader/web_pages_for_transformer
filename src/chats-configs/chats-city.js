@@ -207,7 +207,7 @@ const cityDialog2 = [
   },
   {
     'from': 'app',
-    'text': 'Раздел ЖКХ:<br>1.Вопросы в произвольной форме.<br>2. Ответы на уточняющие вопросы.<br>3.Статус и плановые сроки решения проблемы.',
+    'text': 'Раздел ЖКХ:<br>1. Вопросы в произвольной форме.<br>2. Ответы на уточняющие вопросы.<br>3. Статус и плановые сроки решения проблемы.',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -330,15 +330,7 @@ const cityRedPhoneArgs2 = {
 }
 
 
-// если страница прогрузилась
-ready(() => {
-  // то инициализируем анимацию
-  new RedPhoneAnimation(cityRedPhoneArgs1)
-  new RedPhoneAnimation(cityRedPhoneArgs2)
-})
-
-
-
+// web
 //- Поиск и отображение данных по проектам городского бюджета
 const cityRedWebArgs1 = {
   idElement: 'cityRedWebTriggerElement1',
@@ -363,8 +355,28 @@ const cityRedWebArgs2 = {
   dialogs: cityDialog2
 }
 
+// чистим ls от сигналов трансформации анимации
+if (localStorage.getItem('currentAnimationDialog')) {
+  localStorage.removeItem('currentAnimationDialog');
+}
+if (localStorage.getItem('mob_first_part_user_msg')) {
+  localStorage.removeItem('mob_first_part_user_msg')
+}
+if (localStorage.getItem('mob_first_part_app_msg')) {
+  localStorage.removeItem('mob_first_part_app_msg')
+}
+if (localStorage.getItem('web_first_part_user_msg')) {
+  localStorage.removeItem('web_first_part_user_msg')
+}
+if (localStorage.getItem('web_first_part_app_msg')) {
+  localStorage.removeItem('web_first_part_app_msg')
+}
 
 ready(() => {
+  // mob
+  new RedPhoneAnimation(cityRedPhoneArgs1)
+  new RedPhoneAnimation(cityRedPhoneArgs2)
+  // web
   new RedWebAnimation(cityRedWebArgs1)
   new RedWebAnimation(cityRedWebArgs2)
 })

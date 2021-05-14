@@ -1,6 +1,16 @@
 // red phone
-// данные на вход для создания анимации
+
+// timing
+const shortTiming = 1000
+const mediumTiming = 3300
+const longTiming = 5000
+const lognPlusTiming = 7000
+
+
 //- кадровое делопроизводство
+const date1 = '12 марта 2021'
+const timeFirst1 = '12:41'
+const timeSecond1 = '12:42'
 const faqDialog1 = [
   {
     'from': 'app',
@@ -9,38 +19,8 @@ const faqDialog1 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:41',
-    'delay': 1000
-  },
-  {
-    'from': 'user',
-    'text': 'Я женился! Будут ли какие-то выплаты?',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:41', 
-    'delay': 3300
-  },
-  {
-    'from': 'app',
-    'text': 'Специальных выплат при регистрации брака не предусмотрено. По согласованию с руководителем и при наличии неиспользованных дней ежегодного отпуска, ты можешь оформить оплачиваемый отпуск. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Обрати внимание, что заявку на отпуск можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные. Также по законодательству тебе положено предоставление отпуска без сохранения заработной платы до 5 дней. Его можно оформить без ограничений по сроку подачи заявки.',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:41', 
-    'delay': 3300
-  },
-  {
-    'from': 'app',
-    'text': 'Если что, я тут. Обращайся!',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:41', 
-    'delay': 7000
+    'time': `${date1} ${timeFirst1}`,
+    'delay': shortTiming
   },
   {
     'from': 'user',
@@ -49,18 +29,18 @@ const faqDialog1 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:42', 
-    'delay': 3300
+    'time': `${date1} ${timeFirst1}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Расскажу все самое главное про оформление отпуска :)<br>Чтобы пойти в отпуск, тебе необходимо оформить заявку. Для этого зайди в свой личный кабинет Home.my.com с компьютера (раздел Отпуска – Заявка на отпуск) или через мобильный интранет (Меню – Отпуска) и оформи заявку на нужные даты. <br>Обрати внимание, что если ты хочешь взять оплачиваемый отпуск (при наличии нужного количества неиспользованных дней), заявку можно подать не позднее чем за 7 дней до его начала, чтобы мы успели произвести все необходимые процедуры и выплатить отпускные за 3 дня до его начала. <br>Если у тебя на текущий момент не хватает доступных дней оплачиваемого отпуска или его нужно срочно оформить (до начала остается менее 7 дней), ты можешь оформить отпуск без сохранения заработной платы там же в личном кабинете или через мобильный интранет. <br>После согласования заявки руководителем тебе придет уведомление на почту. <br><br>Во время удаленной работы отпуска оформляют в отделе кадров без твоего присутствия (по онлайн заявкам). <br>После возвращения в офис нужно будет зайти в отдел кадров, расписаться в заявлении и приказе. <br>Если ты работаешь в офисе, то зайди в удобное время в отдел кадров для подписания документов. <br><br>Если остались вопросы, то тебе поможет Виктория Галицына, или ты можешь написать на почту отдела кадров kadry@corp.mail.ru.',
+    'text': 'Чтобы пойти в отпуск, тебе необходимо оформить заявку. Для этого зайди в свой личный кабинет на портале и оформи заявку на нужные даты.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:42', 
-    'delay': 3300
+    'time': `${date1} ${timeFirst1}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -69,8 +49,38 @@ const faqDialog1 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:42', 
-    'delay': 7000
+    'time': `${date1} ${timeFirst1}`, 
+    'delay': lognPlusTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Я заболел, что делать?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date1} ${timeSecond1}`, 
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Если ты заболел, то доведи информацию о своем самочувствии до твоего непосредственного руководителя, сообщив причину и предполагаемое время твоего отсутствия на работе.<br>Обязательно вызывай врача для назначения лечения и оформления больничного листа. ',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date1} ${timeSecond1}`, 
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'Если что, я тут. Обращайся!',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': `${date1} ${timeSecond1}`, 
+    'delay': lognPlusTiming
   }
 ]
 
@@ -78,14 +88,17 @@ const faqRedPhoneArgs1 = {
   idElement: 'faqRPtriggerElement1',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement1',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date1,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:41',
-  clock: '12:41',
+  dateTime: `${date1} ${timeFirst1}`,
+  clock: timeFirst1,
   dialogs: faqDialog1
 }
 
 //- Подбор персонала
+const date2 = '12 марта 2021'
+const timeFirst2 = '12:55'
+const timeSecond2 = '12:56'
 const faqDialog2 = [
   {
     'from': 'app',
@@ -94,28 +107,28 @@ const faqDialog2 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:55', 
-    'delay': 1000
+    'time': `${date2} ${timeFirst2}`, 
+    'delay': shortTiming
   },
   {
     'from': 'user',
-    'text': 'Как стать бадди?',
+    'text': 'Как запустить подбор в мою команду?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'time': `${date2} ${timeFirst2}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'У нас в компании к новому сотруднику "прикрепляется" Бадди - опытный сотрудник, который помогает вводить новичка в должность и быстро адаптировать к корпоративной культуре компании, правилам взаимодействия, традициям в команде и т.д. Всю информацию по тому, как организовать работу ты найдешь в <span class="blueText">Гайде</span>.<br><br> Бадди может стать любой сотрудник компании, но только в рамках своей команды.<br>Если ты хочешь стать бадди, то сообщи об этом своему руководителю!<br>За помощь в адаптации новичка бадди получает особый бейдж (значок в SYS) и 30 коинов.<br><br>Если остались вопросы, то тебе поможет Елена Брусянина.',
+    'text': 'Вся подробная информация по процессу подбора приведена тут.<br>Если коротко, то чтобы запустить подбор, необходимо создать задачу в системе, указать тип «Новая вакансия», заполнить все обязательные поля и отправить на согласование руководителям.<br>Как только все этапы согласования будут завершены, задача перейдет на исполнение ответственному рекрутеру, который свяжется с тобой для обсуждения деталей по подбору.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'time': `${date2} ${timeFirst2}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -124,28 +137,28 @@ const faqDialog2 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:55', 
-    'delay': 5000
+    'time': `${date2} ${timeFirst2}`, 
+    'delay': longTiming
   },
   {
     'from': 'user',
-    'text': 'Как адаптировать нового сотрудника?',
+    'text': 'Мне нужен стажер, как его найти?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'time': `${date2} ${timeSecond2}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Адаптация в дистанционном формате - это непросто. Для каждого участника адаптации мы подготовили гайды — это пошаговое руководство, которое поможет подробнее познакомиться со своей ролью: изучить основные инструменты, посмотреть лучшие практики, применить наши лайфхаки и чек-листы.<br><br><span class="blueText">Гайд</span> для руководителя нового сотрудника.<br><span class="blueText">Гайд</span> для бадди по адаптации нового сотрудника.<br><span class="blueText">Гайд</span> для нового сотрудника компании.<br>Обрати внимание: доступ в файлам доступен только под vpn, при первом входе на сайт система попросит тебя авторизоваться. После авторизации все ссылки будут работать корректно.<br><br> Если у тебя остались вопросы, обратись к своему рекрутеру или Елена Брусянина.',
+    'text': 'Для того чтобы начать поиск стажера, необходимо получить согласование от своего руководителя и убедиться, что в бюджете есть свободная вакансия стажера.<br>Далее поставь задачу в системе на новую вакансию с описанием требований.<br>После согласования задачи будет назначен ответственный рекрутер, он свяжется с тобой для уточнения деталей. ',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'time': `${date2} ${timeSecond2}`, 
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -154,8 +167,8 @@ const faqDialog2 = [
     'descr': '',
     'icon': '',
     'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 7000
+    'time': `${date2} ${timeSecond2}`, 
+    'delay': lognPlusTiming
   }
 ]
 
@@ -163,14 +176,17 @@ const faqRedPhoneArgs2 = {
   idElement: 'faqRPtriggerElement2',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement2',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date2,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date2} ${timeFirst2}`,
+  clock: timeFirst2,
   dialogs: faqDialog2
 }
 
 //- Компенсации и льготы
+const date3 = '12 марта 2021'
+const timeFirst3 = '12:55'
+const timeSecond3 = '12:56'
 const faqDialog3 = [
   {
     'from': 'app',
@@ -180,27 +196,27 @@ const faqDialog3 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
-    'text': 'Как записаться к психологу?',
+    'text': 'Где найти мой полис ДМС?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'До окончания режима дистанционной работы психологи проводят консультации онлайн. У нас работает сразу несколько психологов. Информацию об их терапевтической практике, графиках работы, контакты, а также запись на прием можно найти <span class="blueText">тут</span>.<br><br>Также нам доступен Сервис <span class="blueText"Понимаю.ру></span> - это платформа корпоративного благополучия, которая позволяет получать индивидуальные консультации по психологическим, юридическим, финансовым вопросам и по здоровому образу жизни.<br>Программа поможет в решении жизненных вопросов. Нам доступны дистанционные консультации бесплатно, и их количество не ограничено.<br>Подробнее о сервисе и правилах пользования можно прочитать <span class="blueText">тут</span> и <span class="blueText">тут</span><br><br>Если остались вопросы, то тебе поможет Татьяна Кузнецова.',
+    'text': 'Полис ДМС приходит на корпоративную почту.<br>Также найти свой полис и его id можно в личном кабинете на портале в разделе ДМС. <br><br>Подробное описание программы ДМС можно найти <span class="blueText">тут</span>.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -210,27 +226,27 @@ const faqDialog3 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 7000
+    'delay': mediumTiming
   },
   {
     'from': 'user',
-    'text': 'Где сдать тест на COVID, чтоб попасть в офис?',
+    'text': 'Как записаться на прием к психологу?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Всю актуальную информацию о сдаче тестов в офисе Скайлайт ты можешь найти в этом <span class="blueText">блоге</span>. Там мы публикуем все новости про график сдачи тестов, локации и прочее.<br><br>Для начала проверь, заведена ли у тебя заявка на работу в офисе Скайлайт на нужный день (кнопка на портале под твоей аватаркой или через мобильный интранет, раздел Офис - Посещение офиса). В определенные периоды мы вводим в работу этот функционал для контроля посещаемости.<br>Если у тебя возникли сложности с подачей заявки, проверь, указано ли у тебя рабочее место в профиле. Если все ок с рабочим местом, но заявка не создается, возможно превышен лимит посещений на этот день. Тогда нужно выбрать другую дату.<br><br>Если у тебя истек срок действия прошлого теста, или ты сдаешь тест в первый раз, то результат приходит примерно через 2 часа в виде смс сообщения на твой телефон и письмом на почту (пропуск разблокируется автоматически). Если же ты сдаешь тест повторно, а срок прошлого еще не истек, то результат может прийти в течение 5-6 часов. Если прошло уже больше времени, а результата все еще нет, то тебе поможет Ксения Шагиева и Александра Копкина.<br><br>Тест в Атриуме Скайлайт можно сдать с 8:00 до 19:00 (ежедневно).<br><br>Обрати внимание, что сдача тестов на антитела в офисе не предусмотрена, это тестирование может произвести любая внешняя лаборатория.<br><br>Ответы на частые вопросы про удаленку и работу офиса можно найти <span class="blueText">тут</span><br><br>Если твой вопрос связан с тестированием в другом офисе или не нашел ответа, обратись, пожалуйста, к своему HR бизнес-партнеру или к коллегам из АХО: +7 495 725-63-57, доб. 0700.',
+    'text': 'У нас работает сразу несколько психологов. Информацию об их терапевтической практике, графиках работы, контактах, а также запись на прием можно найти тут.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -240,7 +256,7 @@ const faqDialog3 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 7000
+    'delay': lognPlusTiming
   }
 ]
 
@@ -248,14 +264,17 @@ const faqRedPhoneArgs3 = {
   idElement: 'faqRPtriggerElement3',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement3',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date3,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date3} ${timeFirst3}`,
+  clock: timeFirst3,
   dialogs: faqDialog3
 }
 
 //- ВК и орг мероприятий
+const date4 = '12 марта 2021'
+const timeFirst4 = '12:55'
+const timeSecond4 = '12:56'
 const faqDialog4 = [
   {
     'from': 'app',
@@ -265,27 +284,27 @@ const faqDialog4 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
-    'text': 'спорт в компании',
+    'text': 'Хочу заниматься спортом',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'В нашей компании ведется активная спортивная жизнь, все тренировки проводятся бесплатно, узнать актуальное расписание можно по <span class="blueText">ссылке</span>.<br>Также советуем подписаться на канал в <span class="blueText">Myteam</span>.<br><br>Если остались вопросы, то тебе поможет Алексей Королёв.',
+    'text': 'В нашей компании ведется активная спортивная жизнь, все тренировки проводятся бесплатно, узнать актуальное расписание можно <span class="blueText">тут</span>.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 5000
+    'delay': longTiming
   },
   {
     'from': 'user',
@@ -295,37 +314,17 @@ const faqDialog4 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Все корпоративные скидки собраны в Интранете по ссылке: https://sys.mail.ru/discounts/.<br>Скидки на наши продукты собраны <span class="blueText">здесь</span>.<br><br>Если остались вопросы по программе скидок, то тебе поможет Дарья Бобко.',
+    'text': 'Все корпоративные скидки и акции собраны <span class="blueText">тут</span>.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 7000
-  },
-  {
-    'from': 'user',
-    'text': 'Что такое коины?',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
-  },
-  {
-    'from': 'app',
-    'text': 'Коины — это внутренняя валюта Mail.ru Group, которая генерируется твоей активностью. С их помощью можно приобрести различные товары и услуги в нашем магазине коинов.<br>Узнать больше о том, как их получить и на что потратить, можно <span class="blueText">тут</span>.<br><br>Свой баланс коинов можно узнать на личной странице в Интранете под фотографией профиля.<br><br>Если у тебя остались вопросы по программе coin, то тебе поможет Дарья Балашова.',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': lognPlusTiming
   },
   {
     'from': 'app',
@@ -335,7 +334,7 @@ const faqDialog4 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   }
 ]
 
@@ -343,14 +342,17 @@ const faqRedPhoneArgs4 = {
   idElement: 'faqRPtriggerElement4',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement4',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date4,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date4} ${timeFirst4}`,
+  clock: timeFirst4,
   dialogs: faqDialog4
 }
 
 //- Обучение
+const date5 = '12 марта 2021'
+const timeFirst5 = '12:55'
+const timeSecond5 = '12:56'
 const faqDialog5 = [
   {
     'from': 'app',
@@ -360,7 +362,7 @@ const faqDialog5 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
@@ -370,37 +372,37 @@ const faqDialog5 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Ты можешь бесплатно читать книги в электронной библиотеке MyBook. В коллекции более 177 000 книг!<br>Доступ открыт при регистрации с корпоративных доменов: corp.mail.ru, corp.vk.com, corp.my.com, pixonic.com, pixonic.ru, cyber-loft.ru, cybersport.ru, epicevents.gg, esforce.com, esforce.org, resf.ru, ruhub.tv, virtus.pro.<br><br>Инструкция по подключению доступна по <span class="blueText">ссылке</span>.<br>Если остались вопросы, то тебе поможет Дарья Молчанова.',
+    'text': 'Ты можешь бесплатно читать книги в нашей электронной библиотеке.<br>Также у нас есть библиотека в офисе на 9 этаже.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55', 
-    'delay': 5000
+    'delay': longTiming
   },
   {
     'from': 'user',
-    'text': 'Как попасть на Welcome-тренинг?',
+    'text': 'Как организовать тренинг для своей команды?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Каждые 3 недели мы проводим общекорпоративный welcome-тренинг для новых сотрудников.<br>На тренинге ты узнаешь о стратегии развития компании Mail.ru Group, наших сервисах, услугах и социальных проектах. Мы расскажем о правилах коммуникации вовне и защите информации внутри, а также познакомим тебя с возможностями и бенефитами, которые компания предоставляет для сотрудников.<br><br>Приглашение на welcome-тренинг должно прийти тебе на почту, если этого не произошло, ты можешь записаться самостоятельно <span class="blueText">тут</span>. Ссылка для подключения приходит отдельным письмо накануне тренинга. Если остались вопросы, то тебе поможет Елена Брусянина.<br><br>Если твой вопрос связан с welcome-тренингом отдельного бизнес-юнита (в ряде подразделений проводятся свои внутренние), то обратись с вопросом к своему HR бизнес-партнеру (его контакт ты можешь найти в своем профиле на портале).',
+    'text': 'Если хочешь организовать тренинг для своей команды - согласуй его со своим руководителем и поставь задачу в систему.<br>В задаче подробно опиши свой запрос, укажи сроки обучения и участников.<br>Далее с тобой свяжется менеджер по обучению для уточнения деталей.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -410,7 +412,7 @@ const faqDialog5 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 7000
+    'delay': lognPlusTiming
   }
 ]
 
@@ -418,14 +420,17 @@ const faqRedPhoneArgs5 = {
   idElement: 'faqRPtriggerElement5',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement5',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date5,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date5} ${timeFirst5}`,
+  clock: timeFirst5,
   dialogs: faqDialog5
 }
 
 //- Оценка
+const date6 = '12 марта 2021'
+const timeFirst6 = '12:55'
+const timeSecond6 = '12:56'
 const faqDialog6 = [
   {
     'from': 'app',
@@ -435,7 +440,7 @@ const faqDialog6 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
@@ -445,17 +450,17 @@ const faqDialog6 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Если ты хочешь провести оценку в своей команде, то сначала необходимо определить что именно нужно оценить.<br>На каждый вид оценки есть свои инструменты, разобраться с ними поможет твой HR BP (его контакт ты можешь найти в своем профиле на портале).<br><br>Ниже перечислены основные категории для оценки, если захочешь узнать о них подробнее, то напиши мне название категории, и я помогу тебе.<br><br>Оценка результативности - как сотрудник достигает целей.<br>Оценка компетенций - на каком уровне у сотрудника развиты soft и hard skills.<br>Оценка потенциала - какой вектор развития выбрать для сотрудника и сможет ли он успешно расти вертикальноОценка мотивации - что движет сотрудником и что его мотивирует.<br>Оценка вовлеченности - что помогает и мешает эффективной работе твоей команды.',
+    'text': 'Если ты хочешь провести оценку в своей команде, то сначала необходимо определить что именно нужно оценить.<br>На каждый вид оценки есть свои инструменты, разобраться с ними поможет твой HR BP.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'user',
@@ -465,17 +470,17 @@ const faqDialog6 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 7000
+    'delay': lognPlusTiming
   },
   {
     'from': 'app',
-    'text': 'Для оценки вовлеченности мы проводим опросы с внешним провайдером <span class="blueText">Happy Job</span> в командах от 40 человек.<br>После проведения опроса можно получить анонимные результаты по команде по 50 метрикам и понять, что помогает и мешает сотрудникам эффективно выполнять свою работу, что им нравится, а что хотелось бы поменять в первую очередь. <br><br>Для проведения опроса обратись к своему HR BP (его контакт ты можешь найти в своем профиле на портале).',
+    'text': 'Для оценки вовлеченности мы проводим опросы с внешним провайдером.<br>После проведения опроса можно получить анонимные результаты по команде и понять, что помогает и мешает сотрудникам эффективно выполнять свою работу, что им нравится, а что хотелось бы поменять в первую очередь.<br><br>Для проведения опроса обратись к своему HR BP.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -485,7 +490,7 @@ const faqDialog6 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 7000
+    'delay': lognPlusTiming
   }
 ]
 
@@ -493,14 +498,17 @@ const faqRedPhoneArgs6 = {
   idElement: 'faqRPtriggerElement6',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement6',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date6,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date6} ${timeFirst6}`,
+  clock: timeFirst6,
   dialogs: faqDialog6
 }
 
 //- АХО
+const date7 = '12 марта 2021'
+const timeFirst7 = '12:55'
+const timeSecond7 = '12:56'
 const faqDialog7 = [
   {
     'from': 'app',
@@ -510,27 +518,47 @@ const faqDialog7 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
-    'text': 'Что делать, если потерял пропуск в офис?',
+    'text': 'Как оформить командировку?',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Все пропуска новых сотрудников в Скайлайт передают на ресепшен 1 этажа Башни А. Обратись к администратору с паспортом.<br>Если ты забыл пропуск дома, то обратись на ресепшен Башни А, тебе выдадут временный пропуск.<br><br>Если ты потерял пропуск или он перестал работать, то необходимо поставить таск в Jira - 0700 - Административный департамент (AHO) - пропуск, описать ситуацию и запросить перевыпуск пропуска. После изготовления он будет тебя ждать на ресепшен 1 этажа Башни А. Срок изготовления - 1 рабочий день.<br><br>Если твой вопрос связан с пропуском в другой офис или ты не нашел ответа на свой вопрос, пожалуйста, звони коллегам в АХО: +7 495 725-63-57, доб. 0700.',
+    'text': 'Заявку на командировку необходимо заводить через портал.<br>После создания и согласования на всех этапах заявки на командировку, с тобой свяжутся коллеги из отдела организации деловых поездок, которые сориентируют по дальнейшим шагам.<br><br>После возвращения из поездки не забудь подготовить и сдать необходимые документы.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
+  },
+  {
+    'from': 'user',
+    'text': 'Как работает врач в офисе?',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': '12 марта 2021 12:56', 
+    'delay': mediumTiming
+  },
+  {
+    'from': 'app',
+    'text': 'В офисе работает кабинет терапевта, к которому можно обратиться, если чувствуешь недомогание.<br>График работы врача-терапевта: каждый день с 10.00 до 19.00.<br>Технические перерывы: с 13:00 до 13:30, с 16:30 до 17:00.<br>Место приема: 3 этаж, кабинет 306.',
+    'second_text': '',
+    'descr': '',
+    'icon': '',
+    'options': false,
+    'time': '12 марта 2021 12:56', 
+    'delay': mediumTiming
   },
   {
     'from': 'user',
@@ -540,17 +568,17 @@ const faqDialog7 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Переговорные в офисах можно бронировать через <span class="blueText">SYS</span>.<br>Или в мобильном интранете - раздел "Переговорные". Если он у тебя еще не установлен, это можно сделать по <span class="blueText">инструкции</span>.<br><br>В офисе Скайлайт есть переговорные, которые бронируются только через календарь мероприятий (1-ая, 17-ая, Кинозал и Атриум): https://sys.mail.ru/events/calendar/.<br><br>Если твой вопрос связан с оснащением переговорных комнат, перестановкой мебели, организацией большой встречи и т.д., можно обратиться к коллегам из АХО: +7 495 725-63-57, доб. 0700.<br><br>Если у тебя возникла какая-либо техническая проблема с бронированием переговорной, можно обратиться в тех поддержку:<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Телефон внутренний: 001<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>Ещё таск можно поставить через @MRGJiraBot или по кнопке "Написать в поддержку".',
+    'text': 'Переговорные в офисах можно бронировать <span class="blueText">тут</span>.<br>Если у тебя возникла какая-либо техническая проблема с бронированием переговорной, можно обратиться в тех поддержку.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
@@ -560,7 +588,7 @@ const faqDialog7 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 5000
+    'delay': longTiming
   }
 ]
 
@@ -568,14 +596,17 @@ const faqRedPhoneArgs7 = {
   idElement: 'faqRPtriggerElement7',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement7',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date7,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date7} ${timeFirst7}`,
+  clock: timeFirst7,
   dialogs: faqDialog7
 }
 
 //- техподдержка
+const date8 = '12 марта 2021'
+const timeFirst8 = '12:55'
+const timeSecond8 = '12:56'
 const faqDialog8 = [
   {
     'from': 'app',
@@ -585,7 +616,7 @@ const faqDialog8 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:55',
-    'delay': 1000
+    'delay': shortTiming
   },
   {
     'from': 'user',
@@ -595,17 +626,17 @@ const faqDialog8 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Обратиться в техническую поддержку можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в <span class="blueText">Myteam</span>',
+    'text': 'Обратиться в техническую поддержку можно несколькими способами:<br>• Телефон внутренний<br>• Телефон внешний<br>• Email<br>• <span class="blueText">Чат</span> технической поддержки.',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'user',
@@ -615,37 +646,17 @@ const faqDialog8 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   },
   {
     'from': 'app',
-    'text': 'Если с твоей рабочей техникой что-то случилось, незамедлительно обращайся в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в <span class="blueText">Myteam</span>',
+    'text': 'Если с твоей рабочей техникой что-то случилось, незамедлительно обращайся в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний<br>• Телефон внешний<br>• Email<br>• <span class="blueText">Чат</span> технической поддержки в Myteam',
     'second_text': '',
     'descr': '',
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 5000
-  },
-  {
-    'from': 'user',
-    'text': 'Как изменить пароль почты?',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
-  },
-  {
-    'from': 'app',
-    'text': 'Если ты забыл пароль от своей почты или у тебя возникли другие проблемы, обратись в техническую поддержку.<br><br>Сделать это можно несколькими способами:<br>• Телефон внутренний: 001<br>• Телефон внешний: +7 (495) 725-63-57 и 001 добавочный<br>• Email: sos@corp.mail.ru<br>• JIRA: проект 001 - Техническая поддержка сотрудников (ОА)<br>• Бот в Myteam: @MRGJiraBot<br>• Чат технической поддержки в <span class="blueText">Myteam</span>',
-    'second_text': '',
-    'descr': '',
-    'icon': '',
-    'options': false,
-    'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': longTiming
   },
   {
     'from': 'app',
@@ -655,7 +666,7 @@ const faqDialog8 = [
     'icon': '',
     'options': false,
     'time': '12 марта 2021 12:56', 
-    'delay': 3300
+    'delay': mediumTiming
   }
 ]
 
@@ -663,37 +674,24 @@ const faqRedPhoneArgs8 = {
   idElement: 'faqRPtriggerElement8',
   idWebAnimToCreateTransformer: 'faqRedWebTriggerElement8',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date8,
   headingChat: 'bot',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date8} ${timeFirst8}`,
+  clock: timeFirst8,
   dialogs: faqDialog8
 }
 
 
-// если страница прогрузилась
-ready(() => {
-  // то инициализируем анимацию
-  new RedPhoneAnimation(faqRedPhoneArgs1)
-  new RedPhoneAnimation(faqRedPhoneArgs2)
-  new RedPhoneAnimation(faqRedPhoneArgs3)
-  new RedPhoneAnimation(faqRedPhoneArgs4)
-  new RedPhoneAnimation(faqRedPhoneArgs5)
-  new RedPhoneAnimation(faqRedPhoneArgs6)
-  new RedPhoneAnimation(faqRedPhoneArgs7)
-  new RedPhoneAnimation(faqRedPhoneArgs8)
-})
-
-
+// web
 //- кадровое делопроизводство
 const faqRedWebArgs1 = {
   idElement: 'faqRedWebTriggerElement1',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement1',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date1,
   headingChat: 'кадровое делопроизводство',
-  dateTime: '12 марта 2021 12:41',
-  clock: '12:41',
+  dateTime: `${date1} ${timeFirst1}`,
+  clock: timeFirst1,
   dialogs: faqDialog1
 }
 
@@ -702,10 +700,10 @@ const faqRedWebArgs2 = {
   idElement: 'faqRedWebTriggerElement2',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement2',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date2,
   headingChat: 'Подбор персонала',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date2} ${timeFirst2}`,
+  clock: timeFirst2,
   dialogs: faqDialog2
 }
 
@@ -714,10 +712,10 @@ const faqRedWebArgs3 = {
   idElement: 'faqRedWebTriggerElement3',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement3',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date3,
   headingChat: 'Компенсации и льготы',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date3} ${timeFirst3}`,
+  clock: timeFirst3,
   dialogs: faqDialog3
 }
 
@@ -726,10 +724,10 @@ const faqRedWebArgs4 = {
   idElement: 'faqRedWebTriggerElement4',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement4',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date4,
   headingChat: 'ВК и орг мероприятий',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date4} ${timeFirst4}`,
+  clock: timeFirst4,
   dialogs: faqDialog4
 }
 
@@ -738,10 +736,10 @@ const faqRedWebArgs5 = {
   idElement: 'faqRedWebTriggerElement5',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement5',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date5,
   headingChat: 'Обучение',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date5} ${timeFirst5}`,
+  clock: timeFirst5,
   dialogs: faqDialog5
 }
 
@@ -750,10 +748,10 @@ const faqRedWebArgs6 = {
   idElement: 'faqRedWebTriggerElement6',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement6',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date6,
   headingChat: 'Оценка',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date6} ${timeFirst6}`,
+  clock: timeFirst6,
   dialogs: faqDialog6
 }
 
@@ -762,10 +760,10 @@ const faqRedWebArgs7 = {
   idElement: 'faqRedWebTriggerElement7',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement7',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date7,
   headingChat: 'АХО',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date7} ${timeFirst7}`,
+  clock: timeFirst7,
   dialogs: faqDialog7
 }
 
@@ -774,15 +772,41 @@ const faqRedWebArgs8 = {
   idElement: 'faqRedWebTriggerElement8',
   idWebAnimToCreateTransformer: 'faqRPtriggerElement8',
   type: 0,
-  dateChatingInHeader: '12 марта 2021',
+  dateChatingInHeader: date8,
   headingChat: 'Техподдержка',
-  dateTime: '12 марта 2021 12:55',
-  clock: '12:55',
+  dateTime: `${date8} ${timeFirst8}`,
+  clock: timeFirst8,
   dialogs: faqDialog8
 }
 
+// чистим ls от сигналов трансформации анимации
+if (localStorage.getItem('currentAnimationDialog')) {
+  localStorage.removeItem('currentAnimationDialog');
+}
+if (localStorage.getItem('mob_first_part_user_msg')) {
+  localStorage.removeItem('mob_first_part_user_msg')
+}
+if (localStorage.getItem('mob_first_part_app_msg')) {
+  localStorage.removeItem('mob_first_part_app_msg')
+}
+if (localStorage.getItem('web_first_part_user_msg')) {
+  localStorage.removeItem('web_first_part_user_msg')
+}
+if (localStorage.getItem('web_first_part_app_msg')) {
+  localStorage.removeItem('web_first_part_app_msg')
+}
 
 ready(() => {
+  // mob
+  new RedPhoneAnimation(faqRedPhoneArgs1)
+  new RedPhoneAnimation(faqRedPhoneArgs2)
+  new RedPhoneAnimation(faqRedPhoneArgs3)
+  new RedPhoneAnimation(faqRedPhoneArgs4)
+  new RedPhoneAnimation(faqRedPhoneArgs5)
+  new RedPhoneAnimation(faqRedPhoneArgs6)
+  new RedPhoneAnimation(faqRedPhoneArgs7)
+  new RedPhoneAnimation(faqRedPhoneArgs8)
+  // web
   new RedWebAnimation(faqRedWebArgs1)
   new RedWebAnimation(faqRedWebArgs2)
   new RedWebAnimation(faqRedWebArgs3)

@@ -199,7 +199,7 @@ const hrDialog2 = [
   },
   {
     'from': 'app',
-    'text': 'Благодарим за обращение<br>Завершаем сессию',
+    'text': 'Благодарю за обращение<br>Завершаем сессию',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -221,16 +221,7 @@ const hrRedPhoneArgs2 = {
 }
 
 
-// если страница прогрузилась
-ready(() => {
-  // то инициализируем анимацию
-  new RedPhoneAnimation(hrRedPhoneArgs1)
-  new RedPhoneAnimation(hrRedPhoneArgs2)
-})
-
-
-
-
+// web
 //- расчетный лист
 const hrRedWebArgs1 = {
   idElement: 'hrRedWebTriggerElement1',
@@ -255,8 +246,28 @@ const hrRedWebArgs2 = {
   dialogs: hrDialog2
 }
 
+// чистим ls от сигналов трансформации анимации
+if (localStorage.getItem('currentAnimationDialog')) {
+  localStorage.removeItem('currentAnimationDialog');
+}
+if (localStorage.getItem('mob_first_part_user_msg')) {
+  localStorage.removeItem('mob_first_part_user_msg')
+}
+if (localStorage.getItem('mob_first_part_app_msg')) {
+  localStorage.removeItem('mob_first_part_app_msg')
+}
+if (localStorage.getItem('web_first_part_user_msg')) {
+  localStorage.removeItem('web_first_part_user_msg')
+}
+if (localStorage.getItem('web_first_part_app_msg')) {
+  localStorage.removeItem('web_first_part_app_msg')
+}
 
 ready(() => {
+  // mob
+  new RedPhoneAnimation(hrRedPhoneArgs1)
+  new RedPhoneAnimation(hrRedPhoneArgs2)
+  // web
   new RedWebAnimation(hrRedWebArgs1)
   new RedWebAnimation(hrRedWebArgs2)
 })

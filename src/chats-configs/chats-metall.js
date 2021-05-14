@@ -156,7 +156,7 @@ const metallDialogs1 = [
   },
   {
     'from': 'app',
-    'text': 'Да, скидка может быть предоставлена при следующих условиях _______ (объём, т.п.).<br>Подробнее смотрите на странице нашего сайта <span class="blueText">nlmk.shop/rebate</span>.<br>Остались ли у Вас вопросы по данной продукции?',
+    'text': 'Да, скидка может быть предоставлена на определенных условиях _______ (объём, т.п.).<br>Подробнее смотрите на странице нашего сайта <span class="blueText">nlmk.shop/rebate</span>.<br>Остались ли у Вас вопросы по данной продукции?',
     'second_text': '',
     'descr': '',
     'icon': '',
@@ -496,13 +496,6 @@ const metallRedPhoneArgs2 = {
   dialogs: metallDialogs2
 }
 
-// если страница прогрузилась
-ready(() => {
-  // то инициализируем анимацию
-  new RedPhoneAnimation(metallRedPhoneArgs1)
-  new RedPhoneAnimation(metallRedPhoneArgs2)
-})
-
 
 // Продажа металлопродукции - Продажи_1_смарт
 const metallRedWebArgs1 = {
@@ -528,7 +521,28 @@ const metallRedWebArgs2 = {
   dialogs: metallDialogs2
 }
 
+// чистим ls от сигналов трансформации анимации
+if (localStorage.getItem('currentAnimationDialog')) {
+  localStorage.removeItem('currentAnimationDialog');
+}
+if (localStorage.getItem('mob_first_part_user_msg')) {
+  localStorage.removeItem('mob_first_part_user_msg')
+}
+if (localStorage.getItem('mob_first_part_app_msg')) {
+  localStorage.removeItem('mob_first_part_app_msg')
+}
+if (localStorage.getItem('web_first_part_user_msg')) {
+  localStorage.removeItem('web_first_part_user_msg')
+}
+if (localStorage.getItem('web_first_part_app_msg')) {
+  localStorage.removeItem('web_first_part_app_msg')
+}
+
 ready(() => {
+  // mob
+  new RedPhoneAnimation(metallRedPhoneArgs1)
+  new RedPhoneAnimation(metallRedPhoneArgs2)
+  // web
   new RedWebAnimation(metallRedWebArgs1)
   new RedWebAnimation(metallRedWebArgs2)
 })
