@@ -55,7 +55,7 @@ export class ChatsList {
 
     //  через время активируем диалог, как буд-то произошел клик
     setTimeout(() => {
-      if(document.querySelector(this.needChatItemId)) {
+      if (document.querySelector(this.needChatItemId)) {
         document.querySelector(this.needChatItemId).click()
       }
     }, delayBafereClickOnChatListItem)
@@ -71,7 +71,7 @@ export class ChatsList {
     }
 
     setTimeout(() => {
-      if(document.querySelector('.chatContentWrapper')) {
+      if (document.querySelector('.chatContentWrapper')) {
         document.querySelector('.chatContentWrapper').classList.toggle('activeChat')
       }
     }, delayTransitionAnimationFromChatListToChat)

@@ -35,6 +35,8 @@ export class Chating {
 
     const messageDate = document.createElement('div')
     messageDate.classList.add('message-date')
+    messageDate.style.fontSize = 
+        Math.round(new ComputedProperties().displayElements().messageDateFontSize) + 'px'
     // const timeTextNode = document.createTextNode(time)
     messageDate.innerHTML = time
 
@@ -45,8 +47,12 @@ export class Chating {
     messageContent.style.padding = 
       paddingOffestHeight + 'px ' +
       paddingOffestWeight + 'px'
-    
-      console.log('createMessageHtmlItem typeSet', typeSet)
+    messageContent.style.fontSize = 
+      Math.round(new ComputedProperties().displayElements().chatMessageFontSize) + 'px'
+    messageContent.style.lineHeight = 
+      Math.round(new ComputedProperties().displayElements().chatMessageLineHeight) + 'px'
+
+    console.log('createMessageHtmlItem typeSet', typeSet)
     if (typeSet === 'customer') {
       const appMsgBorderRadiusFirst = Math.round(new ComputedProperties().displayElements().messageBorderRadius.first)
       const appMsgBorderRadiusRest = Math.round(new ComputedProperties().displayElements().messageBorderRadius.rest)
@@ -55,7 +61,6 @@ export class Chating {
         appMsgBorderRadiusRest + 'px ' +
         appMsgBorderRadiusRest + 'px ' +
         appMsgBorderRadiusRest + 'px'
-
     } else if (typeSet === 'company') {
       const userMsgBorderRadiusFirst = Math.round(new ComputedProperties().displayElements().messageBorderRadius.first)
       const userMsgBorderRadiusRest = Math.round(new ComputedProperties().displayElements().messageBorderRadius.rest)
@@ -116,6 +121,7 @@ export class Chating {
         messageLogoLeftOrRightMargin + 'px'
 
       const avatarIcon = document.createElement('img')
+      avatarIcon.style.width = Math.round(new ComputedProperties().displayElements().chatIconImgWidth) + 'px'
       avatarIcon.setAttribute('src', 'chats/assets/img/icons_red_phone_transformer_chat_list/avatarLogo@3x.png')
       avatarIcon.setAttribute('width', '30')
 
@@ -123,7 +129,6 @@ export class Chating {
       avatarWrap.appendChild(avatarIconWrap)
 
       AppIcon = avatarWrap
-
     } else if (typeSet == 'company') {
       const avatarWrap = document.createElement('div')
       avatarWrap.classList.add('item')
@@ -146,6 +151,7 @@ export class Chating {
       avatarIconSourcePng.setAttribute('type', 'image/png')
 
       const avatarIconImg = document.createElement('img')
+      avatarIconImg.style.width = Math.round(new ComputedProperties().displayElements().chatIconImgWidth) + 'px'
       avatarIconImg.setAttribute('src', 'chats/assets/img/userAvatar2_red.png')
       avatarIconImg.setAttribute('width', '25px')
 
@@ -291,25 +297,28 @@ export class Chating {
           options_html_container.innerHTML = options_html_content
         } else if (typeof options === 'boolean') {
           // yes or no
+          const optionBtnFontSize = String( Math.round(new ComputedProperties().displayElements().chatMessageFontSize) + 'px' )
           options_html_content =
             '<div class="chat_options">' +
             '<div class="optin_item option_yes">' +
-            '<button class="option_btn">1. Да</button>' +
+            `<button class="option_btn" style='${optionBtnFontSize}'>1. Да</button>` +
             '</div>' +
             '<div class="optin_item option_no">' +
-            '<button class="option_btn">2. Нет</button>' +
+            `<button class="option_btn" style='${optionBtnFontSize}'>2. Нет</button>` +
             '</div>' +
             '</div>'
           options_html_container.innerHTML = options_html_content
         } else if (typeof options === 'object') {
           // list
           this.checkAllLastedAsOld() // убираем у всех пред. кнопок списков класс lasted , это поможет идентифицировать самые последние кнопки
+
+          const optionBtnFontSize = Math.round(new ComputedProperties().displayElements().chatMessageFontSize) + 'px'
           options_html_content = '<div class="chat_options">'
           for (let i = 0; i < options.length; i++) {
             let value = options[i]
             options_html_content =
               options_html_content +
-              '<div class="optin_item"><button class="option_btn choose lasted">' +
+              `<div class="optin_item" style='${optionBtnFontSize}'><button class="option_btn choose lasted">` +
               String(i + 1) +
               '. ' +
               value +
@@ -376,7 +385,6 @@ export class Chating {
     container.style.marginBottom = messageMarginBottom + 'px'
 
 
-
     const content = this.createMessageHtmlItem(appIcon, time, dialog, typeSet)
 
     // container.innerHTML = content
@@ -387,10 +395,9 @@ export class Chating {
     let fadeInDuration = 1000
 
     console.log('buildMessage - delay', delay)
-    if(delay === 0) {
+    if (delay === 0) {
       fadeInDuration = 0
     }
-    
     
 
     var count = chat_columns.length - 1
@@ -543,7 +550,6 @@ export class Chating {
       document.querySelector('.sendText').style.opacity = '0.5'
       return
     } else if (a === 0) {
-
       if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
         delay = 0
       }
@@ -689,7 +695,6 @@ export class Chating {
 
     // ГЛАВНОЕ УСЛОВИЕ
     if (a < text.length) {
-
       if (checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
         timeTimeout = 0
       }
@@ -727,7 +732,6 @@ export class Chating {
     const vm = this
     // eslint-disable-next-line no-async-promise-executor
     return new Promise(async (resolve, reject) => {
-
       // let timeoutBeforeSendMessage = 100
 
       // if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
@@ -740,11 +744,10 @@ export class Chating {
 
       // ГЛАВНОЕ УСЛОВИЕ
       if (a >= text.length) {
-
         let timeoutBeforeSendMessage = 100
 
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
-          if(localStorage.getItem('mob_first_part_user_msg') ) {
+          if (localStorage.getItem('mob_first_part_user_msg') ) {
             localStorage.removeItem('mob_first_part_user_msg')
             // markCurrentMessageAsUsed(dialogs, i_forTimer)
           }
@@ -784,7 +787,6 @@ export class Chating {
             i_forTimer
         )
       } else {
-
         let timeoutBeforeSendMessage = 100
 
         if (!checkCurrentMessageAsUsed(dialogs, i_forTimer) ) {
@@ -844,7 +846,7 @@ export class Chating {
     //   delay = 0
     // }
     if (!checkCurrentMessageAsUsed(dialogs, i_forTimer)) {
-      if(localStorage.getItem('mob_first_part_app_msg') ) {
+      if (localStorage.getItem('mob_first_part_app_msg') ) {
         localStorage.removeItem('mob_first_part_app_msg')
         // markCurrentMessageAsUsed(dialogs, i_forTimer)
       }

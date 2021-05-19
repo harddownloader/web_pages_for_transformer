@@ -934,7 +934,7 @@ const timeFirst6 = '15:00'
 const staffDialog6 = [
   {
     'from': 'app',
-    'text': 'Приветсвую. Опишите суть вопроса',
+    'text': 'Приветствую. Опишите суть вопроса',
     'second_text': '',
     'descr': '',
     'icon': '',
