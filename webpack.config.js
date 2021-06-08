@@ -17,8 +17,6 @@ console.log('devMode = ', devMode)
 // dev - devMode = true
 // prod - devMode = false
 
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
 const jsLoaders = () => {
   const loaders = [
     {
@@ -270,7 +268,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
+        test: /\.(png|svg|jpg|jpeg|gif|eot|ttf|woff|woff2)$/,
         loader: 'url-loader',
         options: {
           publicPath: './',
