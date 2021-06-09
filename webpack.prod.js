@@ -22,7 +22,6 @@ module.exports = merge(common, {
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
-			// chunkFilename: '[id].[contenthash].css',
 			attributes: {
 				'data-target': '',
 			},
@@ -94,13 +93,6 @@ module.exports = merge(common, {
     splitChunks: {
       cacheGroups: {
         vendor: false,
-        // commons: {
-        //   name: 'commons',
-        //   test: /.styl$/,
-        //   chunks: 'all',
-        //   enforce: true,
-        //   minChunks: 1,
-        // },
         srcRedPhoneStyle: {
           name: 'linkRedPhone',
           test: (c) => {
