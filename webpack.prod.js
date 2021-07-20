@@ -16,12 +16,11 @@ module.exports = merge(common, {
 			test: /\.(jpe?g\|png\|gif\|tif\|webp\|svg\|avif)\$/i,
 			severityError: 'warning', // Ignore errors on corrupted images
 			deleteOriginalAssets: true,
-			minimizerOptions: {
-			},
+			minimizerOptions: {},
 			loader: false,
 		}),
 		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
+			filename: '[name].style.[fullhash].css',
 			attributes: {
 				'data-target': '',
 			},
@@ -89,6 +88,7 @@ module.exports = merge(common, {
 				},
 			}),
 		],
+    // runtimeChunk: 'single',
 		chunkIds: 'named',
     splitChunks: {
       cacheGroups: {
@@ -97,6 +97,7 @@ module.exports = merge(common, {
           name: 'linkRedPhone',
           test: (c) => {
             if (c._identifier !== undefined) {
+              console.log(c._identifier)
               return (
                 c.type.match(/mini-extract/) &&
                 c._identifier.indexOf('srcRedPhone') !== -1 &&

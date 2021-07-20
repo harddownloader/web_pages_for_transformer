@@ -7,9 +7,14 @@ const htmlWebpackInjectAttributesPlugin = require('html-webpack-inject-attribute
 
 
 module.exports = {
-	entry: './src/index.js',
+	// entry: './src/index.js',
+  entry: {
+    linkRedPhone: './srcRedPhone/index.js',
+    linkRedWeb: './srcRedWeb/index.js'
+  },
 	output: {
-		filename: 'bundle.[contenthash].js',
+		filename: '[name].bundle.[fullhash].js',
+    chunkFilename: '[id].js',
 		path: path.join(__dirname, 'dist'),
 		clean: true,
 		publicPath: '/',
@@ -75,11 +80,6 @@ module.exports = {
           // fonts
           from: path.resolve(__dirname, 'src/chats/assets/fonts'),
           to: 'chats/assets/fonts',
-        },
-				{
-          // verstka
-          from: path.resolve(__dirname, 'src/webpage'),
-          to: 'webpage',
         },
         {
           // chats-configs
